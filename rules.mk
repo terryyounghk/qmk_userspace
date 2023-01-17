@@ -4,7 +4,7 @@
 # VIA_ENABLE = no
 # CONSOLE_ENABLE = no
 # COMMAND_ENABLE = no
-# COMBO_ENABLE = yes
+COMBO_ENABLE = yes
 MOUSEKEY_ENABLE = yes # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control
 AUTO_SHIFT_ENABLE = no # Auto Shift
@@ -22,8 +22,6 @@ TAP_DANCE_ENABLE = yes
 
 # SPACE_CADET_ENABLE = no
 
-VPATH += $(USER_PATH)/tapdance
-
-# INTROSPECTION_KEYMAP_C = terryyounghk.c # keymaps
+VPATH += keyboards/gboards $(USER_PATH)/features
 
 SRC += terryyounghk.c

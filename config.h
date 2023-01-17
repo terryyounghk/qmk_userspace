@@ -41,6 +41,14 @@ conflict in the build process.
 #define TAPPING_TERM 200
 #define IGNORE_MOD_TAP_INTERRUPT
 
+// combos
+#ifdef COMBO_ENABLE
+    #define COMBO_VARIABLE_LEN
+    #define COMBO_ONLY_FROM_LAYER 0  // base layer
+    #undef COMBO_TERM
+    #define COMBO_TERM 50
+#endif
+
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 // #define TAPPING_FORCE_HOLD
 

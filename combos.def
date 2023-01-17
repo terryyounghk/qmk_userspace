@@ -1,0 +1,107 @@
+// Copyright 2023 Terry Young (@terryyounghk)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+// When defining combos that involve dual-role keys,
+// make sure to use the full name of the dual-role key,
+// not just its tap keycode.
+
+// special keys
+
+COMB(j_Esc,             KC_ESC,                                 TY_J,               TY_SCLN)
+COMB(l_Quot,            KC_QUOT,                                TY_L,               TY_SCLN)
+COMB(l_Underscore,      KC_UNDS,                                TY_H,               TY_SCLN)
+COMB(l_Delete,          KC_BSPC,                                TY_F,               TY_THUMB_R2)
+COMB(cmdW,              G(KC_W),                                KC_E,               KC_W)
+
+
+// internet stuff
+
+SUBS(com,               ".com",                                 TY_C,               KC_DOT)
+SUBS(protocolSlash,     "://",                                  TY_SCLN,            TY_SLSH)
+SUBS(net,               ".net",                                 TY_E,               KC_DOT)
+SUBS(org,               ".org",                                 KC_R,               KC_DOT)
+SUBS(www,               "www.",                                 KC_W,               KC_DOT)
+
+
+// my most commonly used macros
+
+SUBS(cmdDirUp,          "../",                                  KC_DOT,             TY_SLSH)
+SUBS(viSave,            ":w",                                   TY_SCLN,            KC_W)
+SUBS(viQuit,            ":q!",                                  TY_SCLN,            KC_Q)
+SUBS(viSaveQuit,        ":wq",                                  KC_W,               KC_Q)
+SUBS(qmkCompile,        "qmk compile",                          KC_Q,               KC_P)
+SUBS(qmkFlash,          "qmk flash",                            KC_Q,               TY_F)
+SUBS(gitFetch,          "git fetch",                            TY_G,               TY_F)
+SUBS(gitCheckout,       "git checkout ",                        TY_G,               KC_O)
+SUBS(gitPull,           "git pull",                             TY_G,               KC_P)
+SUBS(gitRestore,        "git restore .",                        TY_G,               KC_R)
+SUBS(gitStatus,         "git status",                           TY_G,               TY_S)
+SUBS(gitPush,           "git push",                             TY_G,               KC_U)
+SUBS(sqlInnerJoin,      "INNER JOIN ",                          TY_J,               TY_I)
+SUBS(sqlOuterJoin,      "OUTER JOIN ",                          TY_J,               KC_O)
+SUBS(yarnBuild,         "yarn build",                           KC_Y,               KC_B)
+SUBS(yarnInstall,       "yarn install",                         KC_Y,               TY_I)
+SUBS(yarnInstallNP,     "yarn install --production=false",      KC_Y,               TY_I,               KC_P)
+SUBS(yarnE2E,           "yarn e2e",                             KC_Y,               TY_E)
+SUBS(yarnLint,          "yarn lint",                            KC_Y,               TY_L)
+SUBS(yarnTest,          "yarn test",                            KC_Y,               KC_T)
+
+
+// my most commonly used words and phrases
+// ordered by combo (case-insensitive)
+
+SUBS(__a,               "Mon",                                  KC_COMM,            TY_A)
+SUBS(__s,               "Tue",                                  KC_COMM,            TY_S)
+SUBS(__d,               "Wed",                                  KC_COMM,            TY_D)
+SUBS(__f,               "Thu",                                  KC_COMM,            TY_F)
+SUBS(__g,               "Fri",                                  KC_COMM,            TY_G)
+SUBS(__h,               "Sat",                                  KC_COMM,            TY_H)
+SUBS(__j,               "Sun",                                  KC_COMM,            TY_J)
+
+SUBS(__z,               "Monday",                               KC_COMM,            KC_Z)
+SUBS(__x,               "Tuesday",                              KC_COMM,            TY_X)
+SUBS(__c,               "Wednesday",                            KC_COMM,            TY_C)
+SUBS(__v,               "Thursday",                             KC_COMM,            TY_V)
+SUBS(__b,               "Friday",                               KC_COMM,            KC_B)
+SUBS(__n,               "Saturday",                             KC_COMM,            KC_N)
+SUBS(__m,               "Sunday",                               KC_COMM,            KC_M)
+
+SUBS(adrAddress,        "address",                              TY_A,               TY_D,               KC_R)
+SUBS(afAfter,           "after",                                TY_A,               TY_F)
+SUBS(aprApprovedThx,    "approved, thanks",                     TY_A,               KC_P,               KC_R)
+SUBS(bdDebug,           "debug",                                KC_B,               TY_D)
+SUBS(bfBefore,          "before",                               KC_B,               TY_F)
+SUBS(bkBlock,           "block",                                KC_B,               TY_K)
+SUBS(bnBlockchain,      "blockchain",                           KC_B,               KC_N)
+SUBS(cfConfluence,      "Confluence",                           TY_C,               TY_F)
+SUBS(ckCrkbd,           "crkbd",                                TY_C,               TY_K)
+SUBS(cnChain,           "chain",                                TY_C,               KC_N)
+SUBS(csySecurity,       "security",                             TY_C,               TY_S,               KC_Y)
+SUBS(cxExchange,        "exchange",                             TY_C,               TY_X)
+SUBS(cyCurrency,        "currency",                             TY_C,               KC_Y)
+SUBS(dopDevops,         "DevOps",                               TY_D,               KC_O,               KC_P)
+SUBS(dpDeposit,         "deposit",                              TY_D,               KC_P)
+SUBS(dtToday,           "today",                                TY_D,               KC_T)
+SUBS(dvDevelop,         "develop",                              TY_D,               TY_V)
+SUBS(dyYesterday,       "yesterday",                            TY_D,               KC_Y)
+SUBS(elmEmail,          "email",                                TY_E,               TY_L,               KC_M)
+SUBS(fnFunction,        "function",                             TY_F,               KC_N)
+SUBS(ghGithub,          "github",                               TY_G,               TY_H)
+SUBS(ktToken,           "token",                                TY_K,               KC_T)
+SUBS(kwWeek,            "week",                                 TY_K,               KC_W)
+SUBS(lmLGTM,            "LGTM",                                 TY_L,               KC_M)
+SUBS(lwWithdrawal,      "withdrawal",                           TY_L,               KC_W)
+SUBS(mnNextMonth,       "next month",                           KC_M,               KC_N)
+SUBS(moMonitor,         "monitor",                              KC_M,               KC_O,               KC_T)
+SUBS(nrtTransaction,    "transaction",                          KC_N,               KC_R,               KC_T)
+SUBS(ntNFT,             "NFT",                                  KC_N,               KC_T)
+SUBS(nvVersion,         "version",                              KC_N,               TY_V)
+SUBS(nwNextWeek,        "next week",                            KC_N,               KC_W)
+SUBS(nxNext,            "next",                                 KC_N,               TY_X)
+SUBS(pnProduction,      "production",                           KC_P,               KC_N)
+SUBS(prwReviewThx,      "please review, thanks",                KC_P,               KC_R,               KC_W)
+SUBS(ruAreYou,          "Are you ",                             KC_R,               KC_U)
+SUBS(rtTransfer,        "transfer",                             KC_R,               KC_T)
+SUBS(sgStaging,         "staging",                              TY_S,               TY_G)
+SUBS(tzTimezone,        "timezone",                             KC_T,               KC_Z)
+SUBS(twWallet,          "wallet",                               KC_T,               KC_W)
