@@ -16,7 +16,7 @@ conflict in the build process.
 #include "quantum.h"
 */
 
-// No need for the single versions when multi performance isn't a problem =D
+// No need for the single versions when multi performance isn't a problem
 #undef ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
 #undef ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
 #undef ENABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
@@ -37,11 +37,8 @@ conflict in the build process.
 
 #define STM32_ONBOARD_EEPROM_SIZE 2048
 
-// // default but used in macros
-// #undef TAPPING_TERM
+// essential to home row mods
 #define TAPPING_TERM 200
-
-// Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
@@ -53,27 +50,12 @@ conflict in the build process.
 // #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 // #define AUTO_SHIFT_NO_SETUP
 
-// // Mouse key speed and acceleration.
-#undef  MOUSEKEY_DELAY
-#define MOUSEKEY_DELAY          0
-
-#undef  MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL       10
-
-#undef  MOUSEKEY_WHEEL_DELAY
-#define MOUSEKEY_WHEEL_DELAY    0
-
-#undef  MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED      4
-
-#undef  MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX    30
-
-#undef  MOUSEKEY_WHEEL_INTERVAL
-#define MOUSEKEY_WHEEL_INTERVAL 120
-
-#undef  MOUSEKEY_WHEEL_MAX_SPEED
-#define MOUSEKEY_WHEEL_MAX_SPEED 4
-
-#undef  MOUSEKEY_WHEEL_TIME_TO_MAX
-#define MOUSEKEY_WHEEL_TIME_TO_MAX 2
+// Mouse key speed and acceleration.
+#define MOUSEKEY_DELAY              0
+#define MOUSEKEY_INTERVAL           10
+#define MOUSEKEY_WHEEL_DELAY        0
+#define MOUSEKEY_MAX_SPEED          4
+#define MOUSEKEY_TIME_TO_MAX        30
+#define MOUSEKEY_WHEEL_INTERVAL     120
+#define MOUSEKEY_WHEEL_MAX_SPEED    4
+#define MOUSEKEY_WHEEL_TIME_TO_MAX  2

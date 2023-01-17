@@ -15,45 +15,9 @@ conflict in the build process.
 #include "quantum.h"
 */
 
-/**
- * Shortcuts
- */
-#define TY_UNDO	  G(KC_Z)
-#define TY_CUT	  G(KC_X)
-#define TY_CPY	  G(KC_C)
-#define TY_PST	  G(KC_V)
-#define TY_LOCK	  C(G(KC_Q))
-#define TY_SLEEP  A(G(KC_PWR))
-#define TY_SHUT	  C(A(G(KC_PWR)))
-#define TY_SSAVE  HYPR(KC_S)
-
-/**
- * Special symbols
- */
-#define TY_YEN    A(KC_Y)
-#define TY_EURO   LSA(KC_2)
-#define TY_POUND  A(KC_3)
-#define TY_DLR    KC_DLR
-
-/**
- * Media, Devices, Wireless/Bluetooth (reserved)
- */
-#define KC_KB_VOLUME_DOWN KC_VDN
-#define KC_KB_VOLUME_UP   KC_VUP
-#define TY_BT1    _______
-#define TY_BT2    _______
-#define TY_BT3    _______
-
-/**
- * Mods
- */
-#define CT(k)     CTL_T(k)
-#define AT(k)     ALT_T(k)
-#define GT(k)     GUI_T(k)
-#define ST(k)     SFT_T(k)
-#define MH(k)     MEH_T(k)
-#define HT(k)     HYPR_T(k)
-
+/* ----------------------------------------------------------------------------------------------
+   enums
+   ---------------------------------------------------------------------------------------------- */
 /**
  * tap dance enums
  */
@@ -70,50 +34,107 @@ conflict in the build process.
 #define TD_CUT           0
 #define TD_COPY          1
 #define TD_PASTE         2
-#define TD_SEMICOLON     3
+
+/* ----------------------------------------------------------------------------------------------
+   helpers
+   ---------------------------------------------------------------------------------------------- */
+/**
+ * Mod Aliases
+ */
+#define CT(k)     CTL_T(k)
+#define AT(k)     ALT_T(k)
+#define GT(k)     GUI_T(k)
+#define ST(k)     SFT_T(k)
+#define MH(k)     MEH_T(k)
+#define HT(k)     HYPR_T(k)
+
+/**
+ * Home Row Mods (HRM)
+ * CAGSH - Ctrl, Alt, Gui, Shift, Hyper
+ */
+#define HRML(k1,k2,k3,k4,k5)   CT(k1),AT(k2),GT(k3),ST(k4),HT(k5) // only supports basic keycode
+#define HRMR(k1,k2,k3,k4,k5)   HT(k1),ST(k2),GT(k3),AT(k4),CT(k5) // only supports basic keycode
+
+/* ----------------------------------------------------------------------------------------------
+   keys / characters
+   ---------------------------------------------------------------------------------------------- */
+
+#define ___ _______
+
+// Special characters
+
+#define TY_YEN          A(KC_Y)
+#define TY_EURO         LSA(KC_2)
+#define TY_PND          A(KC_3)
+#define TY_DLR          KC_DLR
+
+// Media, Devices, Wireless/Bluetooth
+
+#define TY_VDN          KC_KB_VOLUME_DOWN
+#define TY_VUP          KC_KB_VOLUME_UP
+#define TY_VMT          KC_KB_MUTE
+#define TY_BT1          _______ // reserved
+#define TY_BT2          _______ // reserved
+#define TY_BT3          _______ // reserved
+
+// Aliases of keys with mod-taps, layer-taps or those in thumb clusters.
+// This also makes it slightly easier to edit combos.def
+
+#define TY_A	        CT(KC_A)
+#define TY_S	        AT(KC_S)
+#define TY_D	        GT(KC_D)
+#define TY_F	        ST(KC_F)
+#define TY_G	        HT(KC_G)
+
+#define TY_H	        HT(KC_H)
+#define TY_J	        ST(KC_J)
+#define TY_K	        GT(KC_K)
+#define TY_L	        AT(KC_L)
+#define TY_SCLN	        CT(KC_SCLN)
+
+#define TY_E	        MH(KC_E)
+#define TY_I	        MH(KC_I)
+#define TY_SLSH	        MH(KC_SLSH)
+#define TY_ENT          MH(KC_ENT)
 
 #ifdef TAP_DANCE_ENABLE
-    #define TY_X         TD(TD_CUT)
-    #define TY_C         TD(TD_COPY)
-    #define TY_V         TD(TD_PASTE)
-    #define TY_SEMI      TD(TD_SEMICOLON)
+    #define TY_X        TD(TD_CUT)
+    #define TY_C        TD(TD_COPY)
+    #define TY_V        TD(TD_PASTE)
 
 #else // TAP_DANCE_ENABLE
-    #define TY_X         KC_X
-    #define TY_C         KC_C
-    #define TY_V         KC_V
-    #define TY_SEMI      KC_SEMICOLON
+    #define TY_X        KC_X
+    #define TY_C        KC_C
+    #define TY_V        KC_V
 
 #endif // TAP_DANCE_ENABLE
 
-/**
- * Home row mods (HRM)
- * CAGSH - Ctrl, Alt, Gui, Shift, Hyper
- */
-#define HRML(k1,k2,k3,k4,k5)   CT(k1),AT(k2),GT(k3),ST(k4),HT(k5) // only supports basic keycodes
-#define HRMR(k1,k2,k3,k4,k5)   HT(k1),ST(k2),GT(k3),AT(k4),CT(k5) // only supports basic keycodes
 
-#define HM_A	 CT(KC_A)
-#define HM_S	 AT(KC_S)
-#define HM_D	 GT(KC_D)
-#define HM_F	 ST(KC_F)
-#define HM_J	 ST(KC_J)
-#define HM_K	 GT(KC_K)
-#define HM_L	 ST(KC_L)
-#define HM_SEMI  TY_SEMI
+// thumb clusters
 
-/**
- * Layout and layers
- */
-#define TY_QWERTY_L1           KC_Q,            KC_W,           MH(KC_E),       KC_R,           KC_T
+#define TY_THUMB_L1     ST(KC_TAB)
+#define TY_THUMB_L2     LT(3, KC_SPC)
+#define TY_THUMB_L3     LT(2, KC_ESC)
+#define TY_THUMB_R1     LT(2, KC_ENT)
+#define TY_THUMB_R2     LT(1, KC_SPC)
+#define TY_THUMB_R3     ST(KC_BSPC)
+
+
+/* ----------------------------------------------------------------------------------------------
+   keys / characters
+   ---------------------------------------------------------------------------------------------- */
+
+// Layout and layers
+
+#define TY_QWERTY_L1           KC_Q,            KC_W,           TY_E,           KC_R,           KC_T
 #define TY_QWERTY_L2    HRML(  KC_A,            KC_S,           KC_D,           KC_F,           KC_G         )
 #define TY_QWERTY_L3           KC_Z,            TY_X,           TY_C,           TY_V,           KC_B
-#define TY_QWERTY_L4           /**/             /**/            SFT_T(KC_TAB),  LT(3, KC_SPC),  LT(2, KC_ESC)
+#define TY_QWERTY_L4           /**/             /**/            TY_THUMB_L1,    TY_THUMB_L2,    TY_THUMB_L2
 
-#define TY_QWERTY_R1           KC_Y,            KC_U,           MH(KC_I),       KC_O,           KC_P
+#define TY_QWERTY_R1           KC_Y,            KC_U,           TY_I,           KC_O,           KC_P
 #define TY_QWERTY_R2    HRMR(  KC_H,            KC_J,           KC_K,           KC_L,           KC_SCLN      )
-#define TY_QWERTY_R3           KC_N,            KC_M,           KC_COMM,        KC_DOT,         MH(KC_SLSH)
-#define TY_QWERTY_R4           LT(2, KC_ENT),   LT(1, KC_SPC),  SFT_T(KC_BSPC)  /**/            /**/
+#define TY_QWERTY_R3           KC_N,            KC_M,           KC_COMM,        KC_DOT,         TY_SLSH
+#define TY_QWERTY_R4           TY_THUMB_R1,     TY_THUMB_R2,    TY_THUMB_R3     /**/            /**/
 
 
 #define TY_CODING_L1           KC_CIRC,         KC_AT,          KC_LPRN,        KC_RPRN,        KC_DLR
@@ -134,24 +155,20 @@ conflict in the build process.
 
 #define TY_NUMBER_R1           KC_F6,           KC_F7,          KC_F8,          KC_F9,          KC_F10
 #define TY_NUMBER_R2    HRMR(  KC_6,            KC_7,           KC_8,           KC_9,           KC_0         )
-#define TY_NUMBER_R3           TY_POUND,        TY_DLR,         _______,        _______,        _______
+#define TY_NUMBER_R3           TY_PND,          TY_DLR,         _______,        _______,        _______
 #define TY_NUMBER_R4           _______,         _______,        _______         /**/            /**/
 
 
 #define TY_CONTROLS_L1         RGB_TOG,         RGB_SPI,        RGB_HUI,        RGB_VAI,        TY_BT1
-#define TY_CONTROLS_L2         KC_ACL0,         KC_KB_MUTE,     KC_VDN,         KC_VUP,         TY_BT3
+#define TY_CONTROLS_L2         KC_ACL0,         TY_VMT,         TY_VDN,         TY_VUP,         TY_BT3
 #define TY_CONTROLS_L3         RGB_MOD,         RGB_SPD,        RGB_HUD,        RGB_VAD,        TY_BT2
 #define TY_CONTROLS_L4         /**/             /**/            _______,        _______,        _______
 
 #define TY_CONTROLS_R1         KC_BTN4,         KC_WH_L,        KC_MS_U,        KC_WH_R,        KC_BTN5
 #define TY_CONTROLS_R2         KC_WH_D,         KC_MS_L,        KC_MS_D,        KC_MS_R,        KC_ACL0
-#define TY_CONTROLS_R3         KC_WH_U,         KC_BTN1,        KC_BTN2,        KC_BTN3,        MH(KC_ENT)
+#define TY_CONTROLS_R3         KC_WH_U,         KC_BTN1,        KC_BTN2,        KC_BTN3,        TY_ENT
 #define TY_CONTROLS_R4         KC_BTN1,         KC_BTN2,        TO(0)           /**/            /**/
 
-
-#define TY_SOL3_DEFAULT_ENCODERS \
-KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU,            KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU, \
-KC_VOLD,    KC_VOLU,    KC_MNXT,    KC_MPLY,    KC_MPRV,                                    KC_VOLD,    KC_VOLU,    KC_MNXT,    KC_MPLY,    KC_MPRV
 
 #define TY_QWERTY 0
 #define TY_QWERTY_LAYER \
@@ -182,19 +199,20 @@ KC_VOLD,    KC_VOLU,    KC_MNXT,    KC_MPLY,    KC_MPRV,                        
         TY_CONTROLS_L4, TY_CONTROLS_R4
 
 
+/* ----------------------------------------------------------------------------------------------
+   keyboard-specific / layout conversions
+   ---------------------------------------------------------------------------------------------- */
+
 /**
- * Layout conversions
+ * rgbkb/sol3/rev1
  */
-#define ___ _______
+
+#define TY_SOL3_DEFAULT_ENCODERS \
+KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU,            KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU,    KC_VOLD,    KC_VOLU, \
+KC_VOLD,    KC_VOLU,    KC_MNXT,    KC_MPLY,    KC_MPRV,                                    KC_VOLD,    KC_VOLU,    KC_MNXT,    KC_MPLY,    KC_MPRV
 
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 
-/*
-        K01, K02, K03, K04, K05, K06,      K07, K08, K09, K0A, K0B, K0C, \
-        K11, K12, K13, K14, K15, K16,      K17, K18, K19, K1A, K1B, K1C, \
-        K21, K22, K23, K24, K25, K26,      K27, K28, K29, K2A, K2B, K2C, \
-                       K31, K32, K33,      K34, K35, K36 \
-*/
 #define LAYOUT_36key_sol3(...) LAYOUT_36key_sol3_wrapper(__VA_ARGS__)
 #define LAYOUT_36key_sol3_wrapper( \
         K01, K02, K03, K04, K05,        K06, K07, K08, K09, K0A, \
