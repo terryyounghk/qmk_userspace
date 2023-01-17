@@ -1,3 +1,6 @@
+// Copyright 2023 Terry Young (@terryyounghk)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 typedef struct {
     bool is_press_action;
     uint8_t step;

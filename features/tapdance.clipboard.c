@@ -1,3 +1,6 @@
+// Copyright 2023 Terry Young (@terryyounghk)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 static tap dance_state[1];
 
 void on_dance_clipboard_wrapper(uint16_t keycode, qk_tap_dance_state_t *state, void *user_data);
