@@ -62,7 +62,7 @@
 // dot combos
     /* Q     / COMB(DOT_KY_Q,           arg,                            TY_DOT,     TY_Q) //*/
     /* W   **/ SUBS(DOT_KY_W,           "www.",                         TY_DOT,     TY_W) //*/
-    /* E   **/ COMB(DOT_KY_E,           "LGTM",                         TY_DOT,     TY_E) //*/
+    /* E   **/ SUBS(DOT_KY_E,           "LGTM",                         TY_DOT,     TY_E) //*/
     /* R   **/ SUBS(DOT_KY_R,           ".org",                         TY_DOT,     TY_R) //*/
     /* T   **/ SUBS(DOT_KY_T,           ".net",                         TY_DOT,     TY_T) //*/
     /* Y     / COMB(DOT_KY_Y,           arg,                            TY_DOT,     TY_Y) //*/
@@ -71,7 +71,7 @@
     /* O     / COMB(DOT_KY_O,           arg,                            TY_DOT,     TY_O) //*/
     /* P     / COMB(DOT_KY_P,           arg,                            TY_DOT,     TY_P) //*/
     /* A     / COMB(DOT_KY_A,           arg,                            TY_DOT,     TY_A) //*/
-    /* S   **/ COMB(DOT_KY_S,           "is:unread",                    TY_DOT,     TY_S) //*/
+    /* S   **/ SUBS(DOT_KY_S,           "is:unread",                    TY_DOT,     TY_S) //*/
     /* D     / COMB(DOT_KY_D,           arg,                            TY_DOT,     TY_D) //*/
     /* F     / COMB(DOT_KY_F,           arg,                            TY_DOT,     TY_F) //*/
     /* G   **/ SUBS(DOT_KY_G,           "google",                       TY_DOT,     TY_G) //*/
@@ -213,7 +213,7 @@
     SUBS(_IGN,              "ing",                                  TY_I,       TY_G,       TY_N)
     SUBS(_IKT,              "ticket",                               TY_I,       TY_K,       TY_T)
     SUBS(_IM,               "I'm",                                  TY_I,       TY_M)
-    SUBS(_IN,               "in",                                   TY_I,       TY_N
+    SUBS(_IN,               "in",                                   TY_I,       TY_N)
     SUBS(_INO,              "ion",                                  TY_I,       TY_N,       TY_O)
     SUBS(_IS,               "is",                                   TY_I,       TY_S)
     SUBS(_ISU,              "issue",                                TY_I,       TY_S,       TY_U)
@@ -230,7 +230,7 @@
     SUBS(_OU,               "you",                                  TY_O,       TY_U)
     SUBS(_PS,               "please",                               TY_P,       TY_S)
     SUBS(_PRS,              "spreadsheet",                          TY_P,       TY_R,       TY_S)
-    SUBS(_RES,              "reset",                                TY_R,       TY_E,       TY_Sa
+    SUBS(_RES,              "reset",                                TY_R,       TY_E,       TY_S)
     SUBS(_RES_A,            "restart",                              TY_R,       TY_E,       TY_S,       TY_A)
     SUBS(_RES_H,            "research",                             TY_R,       TY_E,       TY_S,       TY_H)
     SUBS(_RES_I,            "restrict",                             TY_R,       TY_E,       TY_S,       TY_I)
