@@ -8,11 +8,11 @@ void render_layer_status(void) {
         case TY_QWERTY:
             oled_write_ln_P(PSTR("QWERTY"), false);
             break;
+        case TY_NUMBERS:
+            oled_write_ln_P(PSTR("NUMBER"), false);
+            break;
         case TY_CODING:
             oled_write_ln_P(PSTR("CODING"), false);
-            break;
-        case TY_NUMBER:
-            oled_write_ln_P(PSTR("NUMBER"), false);
             break;
         case TY_CONTROLS:
             oled_write_ln_P(PSTR("CTRL  "), false);

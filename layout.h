@@ -19,6 +19,14 @@ conflict in the build process.
    enums
    ---------------------------------------------------------------------------------------------- */
 /**
+ * layer enums
+ */
+#define TY_QWERTY 0
+#define TY_NUMBERS 1
+#define TY_CODING 2
+#define TY_CONTROLS 3
+
+/**
  * tap dance enums
  */
 #define SINGLE_TAP         1
@@ -63,7 +71,7 @@ conflict in the build process.
 
 // Special characters
 
-#define TY_YEN          A(KC_Y)
+#define TY_YEN          A(TY_Y)
 #define TY_EURO         LSA(KC_2)
 #define TY_PND          A(KC_3)
 #define TY_DLR          KC_DLR
@@ -77,46 +85,75 @@ conflict in the build process.
 #define TY_BT2          _______ // reserved
 #define TY_BT3          _______ // reserved
 
-// Aliases of keys with mod-taps, layer-taps or those in thumb clusters.
-// This also makes it slightly easier to edit combos.def
 
-#define TY_A	        CT(KC_A)
-#define TY_S	        AT(KC_S)
-#define TY_D	        GT(KC_D)
-#define TY_F	        ST(KC_F)
-#define TY_G	        HT(KC_G)
+// all base layer alpha-numeric aliases for easier editing of combos.def
 
-#define TY_H	        HT(KC_H)
-#define TY_J	        ST(KC_J)
-#define TY_K	        GT(KC_K)
-#define TY_L	        AT(KC_L)
-#define TY_SCLN	        CT(KC_SCLN)
+#define TY_A            CT(KC_A)
+#define TY_B            KC_B
+#define TY_C            KC_C
+#define TY_D            GT(KC_D)
+#define TY_E            MH(KC_E)
+#define TY_F            LSFT_T(KC_F)
+#define TY_G            HT(KC_G)
+#define TY_H            HT(KC_H)
+#define TY_I            MH(KC_I)
+#define TY_J            RSFT_T(KC_J)
+#define TY_K            GT(KC_K)
+#define TY_L            AT(KC_L)
+#define TY_M            KC_M
+#define TY_N            KC_N
+#define TY_O            KC_O
+#define TY_P            KC_P
+#define TY_Q            KC_Q
+#define TY_R            KC_R
+#define TY_S            AT(KC_S)
+#define TY_T            KC_T
+#define TY_U            KC_U
+#define TY_V            KC_V
+#define TY_W            KC_W
+#define TY_X            KC_X
+#define TY_Y            KC_Y
+#define TY_Z            KC_Z
+#define TY_1            CT(KC_1)
+#define TY_2            AT(KC_2)
+#define TY_3            GT(KC_3)
+#define TY_4            LSFT_T(KC_4)
+#define TY_5            MH(KC_5)
+#define TY_6            MH(KC_6)
+#define TY_7            RSFT_T(KC_7)
+#define TY_8            GT(KC_8)
+#define TY_9            AT(KC_9)
+#define TY_0            CT(KC_0)
 
-#define TY_E	        MH(KC_E)
-#define TY_I	        MH(KC_I)
-#define TY_SLSH	        MH(KC_SLSH)
+
+// all base layer symbols for easier editing of combos.def
+
+#define TY_SCLN         CT(KC_SCLN)
+#define TY_SLSH         MH(KC_SLSH)
 #define TY_ENT          MH(KC_ENT)
+#define TY_DOT          KC_DOT
+#define TY_COMM         KC_COMM
+
+
+// tap dance overrides
 
 #ifdef TAP_DANCE_ENABLE
+    #undef  TY_X
     #define TY_X        TD(TD_CUT)
+    #undef  TY_C
     #define TY_C        TD(TD_COPY)
+    #undef  TY_V
     #define TY_V        TD(TD_PASTE)
-
-#else // TAP_DANCE_ENABLE
-    #define TY_X        KC_X
-    #define TY_C        KC_C
-    #define TY_V        KC_V
-
 #endif // TAP_DANCE_ENABLE
 
 
 // thumb clusters
 
-#define TY_THUMB_L1     ST(KC_TAB)
-#define TY_THUMB_L2     LT(3, KC_SPC)
-#define TY_THUMB_L3     LT(2, KC_ESC)
-#define TY_THUMB_R1     LT(2, KC_ENT)
-#define TY_THUMB_R2     LT(1, KC_SPC)
+#define TY_THUMB_L1     ST(KC_ESC)
+#define TY_THUMB_L2     LT(TY_CONTROLS, KC_SPC)
+#define TY_THUMB_L3     LT(TY_NUMBERS, KC_TAB)
+#define TY_THUMB_R1     LT(TY_NUMBERS, KC_ENT)
+#define TY_THUMB_R2     LT(TY_CODING, KC_SPC)
 #define TY_THUMB_R3     ST(KC_BSPC)
 
 
@@ -126,14 +163,14 @@ conflict in the build process.
 
 // Layout and layers
 
-#define TY_QWERTY_L1           KC_Q,            KC_W,           TY_E,           KC_R,           KC_T
-#define TY_QWERTY_L2    HRML(  KC_A,            KC_S,           KC_D,           KC_F,           KC_G         )
-#define TY_QWERTY_L3           KC_Z,            TY_X,           TY_C,           TY_V,           KC_B
-#define TY_QWERTY_L4           /**/             /**/            TY_THUMB_L1,    TY_THUMB_L2,    TY_THUMB_L2
+#define TY_QWERTY_L1           TY_Q,            TY_W,           TY_E,           TY_R,           TY_T
+#define TY_QWERTY_L2           TY_A,            TY_S,           TY_D,           TY_F,           TY_G
+#define TY_QWERTY_L3           TY_Z,            TY_X,           TY_C,           TY_V,           TY_B
+#define TY_QWERTY_L4           /**/             /**/            TY_THUMB_L1,    TY_THUMB_L2,    TY_THUMB_L3
 
-#define TY_QWERTY_R1           KC_Y,            KC_U,           TY_I,           KC_O,           KC_P
-#define TY_QWERTY_R2    HRMR(  KC_H,            KC_J,           KC_K,           KC_L,           KC_SCLN      )
-#define TY_QWERTY_R3           KC_N,            KC_M,           KC_COMM,        KC_DOT,         TY_SLSH
+#define TY_QWERTY_R1           TY_Y,            TY_U,           TY_I,           TY_O,           TY_P
+#define TY_QWERTY_R2           TY_H,            TY_J,           TY_K,           TY_L,           TY_SCLN
+#define TY_QWERTY_R3           TY_N,            TY_M,           TY_COMM,        TY_DOT,         TY_SLSH
 #define TY_QWERTY_R4           TY_THUMB_R1,     TY_THUMB_R2,    TY_THUMB_R3     /**/            /**/
 
 
@@ -148,15 +185,15 @@ conflict in the build process.
 #define TY_CODING_R4           _______,         _______,        _______         /**/            /**/
 
 
-#define TY_NUMBER_L1           KC_F1,           KC_F2,          KC_F3,          KC_F4,          KC_F5
-#define TY_NUMBER_L2    HRML(  KC_1,            KC_2,           KC_3,           KC_4,           KC_5         )
-#define TY_NUMBER_L3           TY_YEN,          TY_EURO,        KC_MINS,        KC_EQL,         KC_PAST
-#define TY_NUMBER_L4           /**/             /**/            _______,        KC_F11,         KC_F12
+#define TY_NUMBERS_L1          KC_F1,           KC_F2,          KC_F3,          KC_F4,          KC_F5
+#define TY_NUMBERS_L2          TY_1,            TY_2,           TY_3,           TY_4,           TY_5
+#define TY_NUMBERS_L3          TY_YEN,          TY_EURO,        KC_MINS,        KC_EQL,         KC_PAST
+#define TY_NUMBERS_L4          /**/             /**/            _______,        KC_F11,         KC_F12
 
-#define TY_NUMBER_R1           KC_F6,           KC_F7,          KC_F8,          KC_F9,          KC_F10
-#define TY_NUMBER_R2    HRMR(  KC_6,            KC_7,           KC_8,           KC_9,           KC_0         )
-#define TY_NUMBER_R3           TY_PND,          TY_DLR,         _______,        _______,        _______
-#define TY_NUMBER_R4           _______,         _______,        _______         /**/            /**/
+#define TY_NUMBERS_R1          KC_F6,           KC_F7,          KC_F8,          KC_F9,          KC_F10
+#define TY_NUMBERS_R2          TY_6,            TY_7,           TY_8,           TY_9,           TY_0
+#define TY_NUMBERS_R3          TY_PND,          TY_DLR,         _______,        _______,        _______
+#define TY_NUMBERS_R4          _______,         _______,        _______         /**/            /**/
 
 
 #define TY_CONTROLS_L1         RGB_TOG,         RGB_SPI,        RGB_HUI,        RGB_VAI,        TY_BT1
@@ -169,29 +206,24 @@ conflict in the build process.
 #define TY_CONTROLS_R3         KC_WH_U,         KC_BTN1,        KC_BTN2,        KC_BTN3,        TY_ENT
 #define TY_CONTROLS_R4         KC_BTN1,         KC_BTN2,        TO(0)           /**/            /**/
 
-
-#define TY_QWERTY 0
 #define TY_QWERTY_LAYER \
         TY_QWERTY_L1,   TY_QWERTY_R1, \
         TY_QWERTY_L2,   TY_QWERTY_R2, \
         TY_QWERTY_L3,   TY_QWERTY_R3, \
         TY_QWERTY_L4,   TY_QWERTY_R4
 
-#define TY_CODING 1
+#define TY_NUMBERS_LAYER \
+        TY_NUMBERS_L1,   TY_NUMBERS_R1, \
+        TY_NUMBERS_L2,   TY_NUMBERS_R2, \
+        TY_NUMBERS_L3,   TY_NUMBERS_R3, \
+        TY_NUMBERS_L4,   TY_NUMBERS_R4
+
 #define TY_CODING_LAYER \
         TY_CODING_L1,   TY_CODING_R1, \
         TY_CODING_L2,   TY_CODING_R2, \
         TY_CODING_L3,   TY_CODING_R3, \
         TY_CODING_L4,   TY_CODING_R4
 
-#define TY_NUMBER 2
-#define TY_NUMBER_LAYER \
-        TY_NUMBER_L1,   TY_NUMBER_R1, \
-        TY_NUMBER_L2,   TY_NUMBER_R2, \
-        TY_NUMBER_L3,   TY_NUMBER_R3, \
-        TY_NUMBER_L4,   TY_NUMBER_R4
-
-#define TY_CONTROLS 3
 #define TY_CONTROLS_LAYER \
         TY_CONTROLS_L1, TY_CONTROLS_R1, \
         TY_CONTROLS_L2, TY_CONTROLS_R2, \

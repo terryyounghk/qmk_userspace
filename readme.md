@@ -2,16 +2,64 @@
 
 This is a personal userspace repo for QMK keyboard firmware.
 
-(work in progress)
-
 # Layout
 
-http://www.keyboard-layout-editor.com/#/gists/ea73aa52bfccbce962bf61f8126d1fdb
+| Characteristics | Support | Notes |
+--------------|:-----:|---
+Keys | 36 |/
+Layers | 4 |/
+Base Layer | QWERTY |/
+Home Row Mods | Yes | Plus Hyper & Meh keys
+Tap Dance | Yes |/
+Combos | Yes |/
+One Shot Keys | No |/
+Caps Word Toggle | Yes | Hold L+R Shift keys
+Momentary Layer Switching | Yes | Thumb clusters
+Toggle Layer Switching | Yes | Combo
 
-![36-keys layout](./docs/layout-36-keys.png)
+## Layers
 
-Similar layout implementations:
-- Moonlander: https://configure.zsa.io/moonlander/layouts/vmZmb
+### Base Layer
+
+![36-keys layout - Base Layer](./docs/terryyounghk-36keys-qmk-layer0.png)
+
+### Number Layer
+
+![36-keys layout - Number Layer](./docs/terryyounghk-36keys-qmk-layer1.png)
+
+### Coding Layer
+
+![36-keys layout - Coding Layer](./docs/terryyounghk-36keys-qmk-layer2.png)
+
+### Controls Layer
+
+![36-keys layout - Controls Layer](./docs/terryyounghk-36keys-qmk-layer3.png)
+
+
+## Combos
+
+Below only highlights some of the **two-key** combos:
+1. Adjacent keys (horizontally and vertically)
+2. A specific key plus another key
+
+There are more combos in `combos.def`, including words and phrases I personally use the most.
+
+### Adjacent Key Combos
+
+![36-keys layout - Adjacent Key Combos](./docs/terryyounghk-36keys-qmk-combos-adjacent.png)
+
+### Dot Combos
+
+![36-keys layout - Dot Combos](./docs/terryyounghk-36keys-qmk-combos-dot.png)
+
+### Semicolon Combos
+
+![36-keys layout - Semicolon Combos](./docs/terryyounghk-36keys-qmk-combos-semicolon.png)
+
+### Slash Combos
+
+![36-keys layout - Slash Combos](./docs/terryyounghk-36keys-qmk-combos-slash.png)
+
 # Building
 
 ```
@@ -32,9 +80,7 @@ qmk flash ./keymaps/sol3.json
 
 ## Combos
 
-When defining combos that involve dual-role keys,
-make sure to use the full name of the dual-role key,
-not just its tap keycode.
+When defining combos that involve multi-role keys, use the full name of the dual-role key or its tap keycode.
 
 This is a common error.
 
@@ -49,5 +95,7 @@ const uint16_t PROGMEM A_S_COMBO[] = {LGUI_T(KC_A), LALT_T(KC_S), COMBO_END}; //
 
 # TODO
 
-1. wip: finalize combos
-2. leader keys
+1. github action workflow
+2. leader keys (maybe)
+3. layer state audio feedback (if supported)
+4. test oled (previously untested)

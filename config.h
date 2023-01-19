@@ -52,6 +52,9 @@ conflict in the build process.
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 // #define TAPPING_FORCE_HOLD
 
+// Caps
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 // Auto Shift
 // #define NO_AUTO_SHIFT_TAB
 // #define NO_AUTO_SHIFT_ALPHA

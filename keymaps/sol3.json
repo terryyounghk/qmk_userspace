@@ -6,8 +6,8 @@
     "layout": "LAYOUT_36key_sol3",
     "layers": [
         [ "TY_QWERTY_LAYER" ],
+        [ "TY_NUMBERS_LAYER" ],
         [ "TY_CODING_LAYER" ],
-        [ "TY_NUMBER_LAYER" ],
         [ "TY_CONTROLS_LAYER" ]
     ],
     "notes": "",

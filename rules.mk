@@ -1,9 +1,7 @@
 # Copyright 2023 Terry Young (@terryyounghk)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# VIA_ENABLE = no
-# CONSOLE_ENABLE = no
-# COMMAND_ENABLE = no
+CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
 MOUSEKEY_ENABLE = yes # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control
