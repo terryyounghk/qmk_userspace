@@ -29,7 +29,6 @@ conflict in the build process.
 
 
 #define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 2
-// 224B per layer right now
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
 
@@ -37,16 +36,17 @@ conflict in the build process.
 
 #define STM32_ONBOARD_EEPROM_SIZE 2048
 
-// essential to home row mods
+// tapping sensitivity tweaked for home row mods
 #define TAPPING_TERM 200
 #define IGNORE_MOD_TAP_INTERRUPT
+// #define PERMISSIVE_HOLD
+// #define RETRO_TAPPING
 
 // combos
 #ifdef COMBO_ENABLE
     #define COMBO_VARIABLE_LEN
     #define COMBO_ONLY_FROM_LAYER 0  // base layer
-    #undef COMBO_TERM
-    #define COMBO_TERM 50
+    #define COMBO_TERM 35
 #endif
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
@@ -63,10 +63,10 @@ conflict in the build process.
 
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY              0
-#define MOUSEKEY_INTERVAL           10
+#define MOUSEKEY_INTERVAL           12
 #define MOUSEKEY_WHEEL_DELAY        0
 #define MOUSEKEY_MAX_SPEED          4
-#define MOUSEKEY_TIME_TO_MAX        30
+#define MOUSEKEY_TIME_TO_MAX        40
 #define MOUSEKEY_WHEEL_INTERVAL     120
-#define MOUSEKEY_WHEEL_MAX_SPEED    4
-#define MOUSEKEY_WHEEL_TIME_TO_MAX  2
+#define MOUSEKEY_WHEEL_MAX_SPEED    8
+#define MOUSEKEY_WHEEL_TIME_TO_MAX  4
