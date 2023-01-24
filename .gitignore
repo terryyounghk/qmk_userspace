@@ -1,5 +1,6 @@
 # Custom
 temp/
+combos-private*.def
 
 # Prerequisites
 *.d
