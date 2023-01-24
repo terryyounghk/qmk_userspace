@@ -1,0 +1,66 @@
+// Copyright 2023 Terry Young (@terryyounghk)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+// one-handed combos, mirrored on both sides
+
+// left hand side
+    #undef  TY_MAIN
+    #define TY_MAIN TY_TCL2
+    COMB(KY_Q_______TY_TCL2,       XXXXXXX,                                         TY_MAIN, TY_Q)
+    COMB(KY_W_______TY_TCL2,       OSL(TY_NUMBERS),                                 TY_MAIN, TY_W)
+    COMB(KY_E_______TY_TCL2,       OSL(TY_CODING),                                  TY_MAIN, TY_E)
+    COMB(KY_R_______TY_TCL2,       OSL(TY_CONTROLS),                                TY_MAIN, TY_R)
+    COMB(KY_T_______TY_TCL2,       CW_TOGG,                                         TY_MAIN, TY_T)
+    COMB(KY_A_______TY_TCL2,       OSM(MOD_LCTL),                                   TY_MAIN, TY_A)
+    COMB(KY_S_______TY_TCL2,       OSM(MOD_LALT),                                   TY_MAIN, TY_S)
+    COMB(KY_D_______TY_TCL2,       OSM(MOD_LGUI),                                   TY_MAIN, TY_D)
+    COMB(KY_F_______TY_TCL2,       OSM(MOD_LSFT),                                   TY_MAIN, TY_F)
+    COMB(KY_G_______TY_TCL2,       OSM(MOD_HYPR),                                   TY_MAIN, TY_G)
+    COMB(KY_Z_______TY_TCL2,       KC_CAPS,                                         TY_MAIN, TY_Z)
+    TOGG(KY_X_______TY_TCL2,       TY_NUMBERS,                                      TY_MAIN, TY_X)
+    TOGG(KY_C_______TY_TCL2,       TY_CODING,                                       TY_MAIN, TY_C)
+    TOGG(KY_V_______TY_TCL2,       TY_CONTROLS,                                     TY_MAIN, TY_V)
+    COMB(KY_B_______TY_TCL2,       OSM(MOD_MEH),                                    TY_MAIN, TY_B)
+
+    // more one-shot mods!!
+    COMB(KY_AS______TY_TCL2,       OSM(MOD_LCTL | MOD_LALT),                        TY_MAIN, TY_A, TY_S)
+    COMB(KY_AD______TY_TCL2,       OSM(MOD_LCTL | MOD_LGUI),                        TY_MAIN, TY_A, TY_D)
+    COMB(KY_AF______TY_TCL2,       OSM(MOD_LCTL | MOD_LSFT),                        TY_MAIN, TY_A, TY_F)
+    COMB(KY_SD______TY_TCL2,       OSM(MOD_LALT | MOD_LGUI),                        TY_MAIN, TY_S, TY_D)
+    COMB(KY_SF______TY_TCL2,       OSM(MOD_LALT | MOD_LSFT),                        TY_MAIN, TY_S, TY_F)
+    COMB(KY_DF______TY_TCL2,       OSM(MOD_LGUI | MOD_LSFT),                        TY_MAIN, TY_D, TY_F)
+    COMB(KY_ASD_____TY_TCL2,       OSM(MOD_LCTL | MOD_LALT | MOD_LGUI),             TY_MAIN, TY_A, TY_S, TY_D)
+    COMB(KY_SDF_____TY_TCL2,       OSM(MOD_LALT | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_S, TY_D, TY_F)
+    COMB(KY_ASF_____TY_TCL2,       OSM(MOD_LCTL | MOD_LALT | MOD_LSFT),             TY_MAIN, TY_A, TY_S, TY_F)
+    COMB(KY_ADF_____TY_TCL2,       OSM(MOD_LCTL | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_A, TY_D, TY_F)
+
+// right hand side
+    #undef  TY_MAIN
+    #define TY_MAIN TY_TCR2
+    COMB(KY_Y_______TY_TCR2,       CW_TOGG,                                         TY_MAIN, TY_Y)
+    COMB(KY_U_______TY_TCR2,       OSL(TY_CONTROLS),                                TY_MAIN, TY_U)
+    COMB(KY_I_______TY_TCR2,       OSL(TY_CODING),                                  TY_MAIN, TY_I)
+    COMB(KY_O_______TY_TCR2,       OSL(TY_NUMBERS),                                 TY_MAIN, TY_O)
+    COMB(KY_P_______TY_TCR2,       XXXXXXX,                                         TY_MAIN, TY_P)
+    COMB(KY_H_______TY_TCR2,       OSM(MOD_HYPR),                                   TY_MAIN, TY_H)
+    COMB(KY_J_______TY_TCR2,       OSM(MOD_LSFT),                                   TY_MAIN, TY_J)
+    COMB(KY_K_______TY_TCR2,       OSM(MOD_LGUI),                                   TY_MAIN, TY_K)
+    COMB(KY_L_______TY_TCR2,       OSM(MOD_LALT),                                   TY_MAIN, TY_L)
+    COMB(KY_SCLN____TY_TCR2,       OSM(MOD_LCTL),                                   TY_MAIN, TY_SCLN)
+    COMB(KY_N_______TY_TCR2,       OSM(MOD_MEH),                                    TY_MAIN, TY_N)
+    COMB(KY_M_______TY_TCR2,       TY_CONTROLS,                                     TY_MAIN, TY_M)
+    COMB(KY_COMM____TY_TCR2,       TY_CODING,                                       TY_MAIN, TY_COMM)
+    COMB(KY_DOT_____TY_TCR2,       TY_NUMBERS,                                      TY_MAIN, TY_DOT)
+    COMB(KY_SLSH____TY_TCR2,       KC_CAPS,                                         TY_MAIN, TY_SLSH)
+
+    // more one-shot mods!!
+    COMB(KY_LSCLN___TY_TCR2,       OSM(MOD_LCTL | MOD_LALT),                        TY_MAIN, TY_L, TY_SCLN)
+    COMB(KY_KSCLN___TY_TCR2,       OSM(MOD_LCTL | MOD_LGUI),                        TY_MAIN, TY_K, TY_SCLN)
+    COMB(KY_JSCLN___TY_TCR2,       OSM(MOD_LCTL | MOD_LSFT),                        TY_MAIN, TY_J, TY_SCLN)
+    COMB(KY_LK______TY_TCR2,       OSM(MOD_LALT | MOD_LGUI),                        TY_MAIN, TY_L, TY_K)
+    COMB(KY_LJ______TY_TCR2,       OSM(MOD_LALT | MOD_LSFT),                        TY_MAIN, TY_L, TY_J)
+    COMB(KY_KJ______TY_TCR2,       OSM(MOD_LGUI | MOD_LSFT),                        TY_MAIN, TY_K, TY_J)
+    COMB(KY_LKSCLN__TY_TCR2,       OSM(MOD_LCTL | MOD_LALT | MOD_LGUI),             TY_MAIN, TY_L, TY_K, TY_SCLN)
+    COMB(KY_LKJ_____TY_TCR2,       OSM(MOD_LALT | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_L, TY_K, TY_J)
+    COMB(KY_LJSCLN__TY_TCR2,       OSM(MOD_LCTL | MOD_LALT | MOD_LSFT),             TY_MAIN, TY_L, TY_J, TY_SCLN)
+    COMB(KY_KJSCLN__TY_TCR2,       OSM(MOD_LCTL | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_K, TY_J, TY_SCLN)

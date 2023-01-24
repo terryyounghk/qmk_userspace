@@ -7,6 +7,7 @@ MOUSEKEY_ENABLE = yes # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control
 AUTO_SHIFT_ENABLE = no # Auto Shift
 TAP_DANCE_ENABLE = yes
+DYNAMIC_TAPPING_TERM_ENABLE = yes
 
 # ifeq ($(strip $(KEYBOARD)), crkdb/rev1)
 # 	RGBLIGHT_ENABLE = no

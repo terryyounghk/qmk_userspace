@@ -44,8 +44,8 @@ conflict in the build process.
 
 // combos
 #ifdef COMBO_ENABLE
-    #define COMBO_VARIABLE_LEN
-    #define COMBO_ONLY_FROM_LAYER 0  // base layer
+#define COMBO_VARIABLE_LEN
+#define COMBO_ONLY_FROM_LAYER 0  // base layer
     #define COMBO_TERM 35
 #endif
 
@@ -53,7 +53,9 @@ conflict in the build process.
 // #define TAPPING_FORCE_HOLD
 
 // Caps
-#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+// #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+// #define CAPS_WORD_IDLE_TIMEOUT 5000
+#define CAPS_WORD_TOGGLE_KEY
 
 // Auto Shift
 // #define NO_AUTO_SHIFT_TAB

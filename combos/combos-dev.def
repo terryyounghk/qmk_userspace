@@ -1,0 +1,13 @@
+// Copyright 2023 Terry Young (@terryyounghk)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+// Z combos for testing
+
+    // output the time that firmware was compiled
+    SUBS(_TY_TEST,          __TIMESTAMP__,                          TY_Z,       TY_H)
+
+    // dynamic tapping term
+    // https://docs.qmk.fm/#/tap_hold?id=dynamic-tapping-term
+    COMB(_TY_DTDN,          TY_DTDN,                                TY_Z,       TY_J)
+    COMB(_TY_DTUP,          TY_DTUP,                                TY_Z,       TY_K)
+    COMB(_TY_DTPR,          TY_DTPR,                                TY_Z,       TY_L)

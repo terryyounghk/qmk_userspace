@@ -1,0 +1,25 @@
+// Copyright 2023 Terry Young (@terryyounghk)
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+// two-handed symmetric combos
+    COMB(KC_Q_KY_P,                     XXXXXXX,                        TY_Q,     TY_P)
+    COMB(KC_W_KY_O,                     XXXXXXX,                        TY_W,     TY_O)
+    COMB(KC_E_KY_I,                     XXXXXXX,                        TY_E,     TY_I)
+    COMB(KC_R_KY_O,                     XXXXXXX,                        TY_R,     TY_U)
+    COMB(KC_T_KY_Y,                     XXXXXXX,                        TY_T,     TY_Y)
+
+    COMB(KC_A_KY_SCLN,                  OSM(MOD_LCTL),                  TY_A,     TY_SCLN)
+    COMB(KC_S_KY_L,                     OSM(MOD_LALT),                  TY_S,     TY_L)
+    COMB(KC_D_KY_K,                     OSM(MOD_LGUI),                  TY_D,     TY_K)
+    COMB(KC_F_KY_J,                     OSM(MOD_LSFT),                  TY_F,     TY_J)
+    COMB(KC_G_KY_H,                     OSM(MOD_HYPR),                  TY_G,     TY_H)
+
+    COMB(KC_Z_KY_SLSH,                  OSM(MOD_MEH),                   TY_Z,     TY_SLSH)
+    COMB(KC_X_KY_DOT,                   G(KC_X),                        TY_X,     TY_DOT)
+    COMB(KC_C_KY_COMM,                  G(KC_C),                        TY_C,     TY_COMM)
+    COMB(KC_V_KY_M,                     G(KC_V),                        TY_V,     TY_M)
+    COMB(KC_B_KY_N,                     OSM(MOD_MEH),                   TY_B,     TY_N)
+
+    COMB(KC_LT1_RT1,                    KC_CAPS,                        TY_TCL1,  TY_TCR1)
+    COMB(KC_LT2_RT2,                    CW_TOGG,                        TY_TCL2,  TY_TCR2)
+    COMB(KC_LT3_RT3,                    XXXXXXX,                        TY_TCL3,  TY_TCR3)

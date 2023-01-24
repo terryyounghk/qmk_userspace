@@ -5,8 +5,8 @@ void render_layer_status(void) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer"), false);
     switch (get_highest_layer(layer_state)) {
-        case TY_QWERTY:
-            oled_write_ln_P(PSTR("QWERTY"), false);
+        case TY_ALPHAS:
+            oled_write_ln_P(PSTR("ALPHAS"), false);
             break;
         case TY_NUMBERS:
             oled_write_ln_P(PSTR("NUMBER"), false);
