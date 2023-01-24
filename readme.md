@@ -127,17 +127,7 @@ Another example below shows the `ZS` combos which output short month names. Simi
 
 There are more combos in `combos.def`, including those that output words and phrases I frequently use but too lazy to type over and over again...
 
-## Private Combos
-
 You can also start extending your own preferences/overides in `combos-private.def`.
-
-It contain combos that, for example, output command strings or work-related terminologies, etc.
-
-Before adding your own, to prevent Git from committing changes to all `combos-private*.def` files, run the following:
-
-```
-git update-index --assume-unchanged ./combos/combos-private.def
-```
 
 # Setup
 
