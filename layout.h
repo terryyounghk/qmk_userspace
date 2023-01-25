@@ -166,6 +166,9 @@ conflict in the build process.
     #define TY_TCR2         LT(TY_CODING, KC_SPC)
     #define TY_TCR3         ST(KC_BSPC)
 
+    // in other layers
+    #define TY_F11          ST(KC_F11)
+    #define TY_F12          LT(TY_CONTROLS, KC_F12)
 
 // dynamic tapping term
 
@@ -198,7 +201,7 @@ conflict in the build process.
 #define TY_NUMBERS_L1          KC_F1,           KC_F2,          KC_F3,          KC_F4,          KC_F5
 #define TY_NUMBERS_L2          TY_1,            TY_2,           TY_3,           TY_4,           TY_5
 #define TY_NUMBERS_L3          TY_YEN,          TY_EURO,        KC_MINS,        KC_EQL,         KC_PAST
-#define TY_NUMBERS_L4          /**/             /**/            _______,        KC_F11,         KC_F12
+#define TY_NUMBERS_L4          /**/             /**/            _______,        TY_F11,         TY_F12
 
 #define TY_NUMBERS_R1          KC_F6,           KC_F7,          KC_F8,          KC_F9,          KC_F10
 #define TY_NUMBERS_R2          TY_6,            TY_7,           TY_8,           TY_9,           TY_0
