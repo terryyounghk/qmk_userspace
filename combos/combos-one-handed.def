@@ -48,9 +48,9 @@
     COMB(KY_L_______TY_TCR2,       OSM(MOD_LALT),                                   TY_MAIN, TY_L)
     COMB(KY_SCLN____TY_TCR2,       OSM(MOD_LCTL),                                   TY_MAIN, TY_SCLN)
     COMB(KY_N_______TY_TCR2,       OSM(MOD_MEH),                                    TY_MAIN, TY_N)
-    COMB(KY_M_______TY_TCR2,       TY_CONTROLS,                                     TY_MAIN, TY_M)
-    COMB(KY_COMM____TY_TCR2,       TY_CODING,                                       TY_MAIN, TY_COMM)
-    COMB(KY_DOT_____TY_TCR2,       TY_NUMBERS,                                      TY_MAIN, TY_DOT)
+    TOGG(KY_M_______TY_TCR2,       TY_CONTROLS,                                     TY_MAIN, TY_M)
+    TOGG(KY_COMM____TY_TCR2,       TY_CODING,                                       TY_MAIN, TY_COMM)
+    TOGG(KY_DOT_____TY_TCR2,       TY_NUMBERS,                                      TY_MAIN, TY_DOT)
     COMB(KY_SLSH____TY_TCR2,       KC_CAPS,                                         TY_MAIN, TY_SLSH)
 
     // more one-shot mods!!
