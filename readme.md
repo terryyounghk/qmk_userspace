@@ -2,9 +2,13 @@
 
 This is a personal userspace repo for QMK keyboard firmware.
 
+[Combo Mods](https://jasoncarloscox.com/blog/combo-mods/) are always present, for both two-handed or one-handed combos.
+
+Optionally, you can enable [Home Row Mods (CAGS)](https://precondition.github.io/home-row-mods) and/or [tap dances](https://thomasbaart.nl/2018/12/13/qmk-basics-tap-dance/) on alpha keys. These are disabled by default in exchange for a more responsive "Tapping Term", suitable for fast typists wanting to avoid accidentally triggering modifiers or other tap dance "hold" actions.
+
 Disclaimer: this is only tested on RGBKB sol3, which is the keyboard I currently use.
 
-![36-keys layout - Overview](./docs/terryyounghk-36keys-qmk-overview.png)
+![36-keys layout - Overview](./docs/terryyounghk-36keys-qmk-overview-20230126-01.png)
 
 # Characteristics
 
@@ -18,11 +22,12 @@ It also demonstrates various ways to implement memorable key combo layouts that 
 --------------|:-----:|---
 Keys | 36 |/
 Layers | 4 |/
-Base Layer | ALPHAS |/
-Home Row Mods | Yes | On all layers
-Tap Dance | Yes |/
+Base Layer | QWERTY |/
+Combo Mods | Yes |/
+Home Row Mods | Yes | Optional. On all layers
+Tap Dance | Yes | Optional
 Combos | Yes |/
-Caps Word | Yes | Using Comboes, or hold L+R Shift
+Caps Word | Yes | Using Combos, or hold L+R Shift
 One Shot Modifiers | Yes | Using Combos
 One Shot Layers | Yes | Using Combos
 Toggle Layer | Yes | Using Combos
@@ -32,15 +37,15 @@ Momentary Layers | Yes | Using Thumb Clusters
 
 ## Base Layer
 
-![36-keys layout - base layer](./docs/terryyounghk-36keys-qmk-layer0.png)
+![36-keys layout - base layer](./docs/terryyounghk-36keys-qmk-layer0-20230126-01.png)
 
 ## Number Layer
 
-![36-keys layout - Number Layer](./docs/terryyounghk-36keys-qmk-layer1.png)
+![36-keys layout - Number Layer](./docs/terryyounghk-36keys-qmk-layer1-20230126-01.png)
 
 ## Coding Layer
 
-![36-keys layout - Coding Layer](./docs/terryyounghk-36keys-qmk-layer2.png)
+![36-keys layout - Coding Layer](./docs/terryyounghk-36keys-qmk-layer2-20230126-01.png)
 
 ## Controls Layer
 
@@ -71,7 +76,7 @@ This combo scheme mainly features the following:
 
 ![36-keys layout - Symmetric Key Combos](./docs/terryyounghk-36keys-qmk-combos-symmetric.png)
 
-This combo scheme provides one-shot modifiers that match the positions of home row mods, plus other common keyboard shortcuts as well.
+This combo scheme provides two-handed Combo Mods, which are one-shot modifiers that match the positions of home row mods, plus other common keyboard shortcuts as well.
 
 Examples:
 | Combo | Output
@@ -92,7 +97,7 @@ One-shot mods can be chained too. For example, to perform `Cmd+Shift+S`, you can
 
 ![36-keys layout - One-handed Combos](./docs/terryyounghk-36keys-qmk-combos-one-handed.png)
 
-This combo scheme provides one-shot modifiers, one-shot layers, toggle layers and Caps Lock/Word, all via one-handed combos on either side.
+This combo scheme provides one-handed Combo Mods, as well as one-shot layers, toggle layers and Caps Lock/Word, all via one-handed combos on either side.
 
 The two sides are mirrored.
 
@@ -183,6 +188,14 @@ Caps Word
 
 - https://kbd.news/Caps-Word-and-other-QMK-tips-1073.html
 - https://getreuer.info/posts/keyboards/caps-word/index.html#add-caps-word-to-your-keymap
+
+# Why both Home Row Mods and Combo Mods?
+
+Personally, I decided to make Home Row Mods optional, as I wanted to gravitate myself more towards less "holding" movements and more one-shot or combos movements, but also wanted the best of both worlds remain optional for those who like Home Row Mods, or for my future self in case I want to switch back or experiment more.
+
+I wanted to see if these two modifier methods can co-exist, and it seems like they can.
+
+Whether you want to switch from home row mods to combos mods or vice versa, or even haven't used any of them and wanted to try out both to see which suits your preference, I hope this idea serves as a good transitional keymap on your own journey of keymap customization.
 
 # TODO
 

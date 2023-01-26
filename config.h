@@ -36,16 +36,18 @@ conflict in the build process.
 
 #define STM32_ONBOARD_EEPROM_SIZE 2048
 
-// tapping sensitivity tweaked for home row mods
-#define TAPPING_TERM 200
-#define IGNORE_MOD_TAP_INTERRUPT
-// #define PERMISSIVE_HOLD
-// #define RETRO_TAPPING
+#if defined TY_HOME_ROW_MODS_ENABLE || defined TY_DUAL_ROLE_THUMBS_ENABLE
+    // tapping sensitivity tweaked for home row mods
+    #define TAPPING_TERM 200
+    #define IGNORE_MOD_TAP_INTERRUPT
+    // #define PERMISSIVE_HOLD
+    // #define RETRO_TAPPING
+#endif
 
 // combos
 #ifdef COMBO_ENABLE
-#define COMBO_VARIABLE_LEN
-#define COMBO_ONLY_FROM_LAYER 0  // base layer
+    #define COMBO_VARIABLE_LEN
+    #define COMBO_ONLY_FROM_LAYER 0  // base layer
     #define COMBO_TERM 35
 #endif
 

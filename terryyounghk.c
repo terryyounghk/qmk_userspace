@@ -4,5 +4,8 @@
 #include QMK_KEYBOARD_H
 #include "g/keymap_combo.h"
 #include "terryyounghk.h"
-#include "features/tapdance.c"
+#ifdef TAP_DANCE_ENABLE
+    #include "features/tapdance.c"
+#endif
 #include "features/oled.c"
+
