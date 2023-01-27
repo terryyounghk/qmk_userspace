@@ -1,13 +1,34 @@
 // Copyright 2023 Terry Young (@terryyounghk)
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-// two-alpha combos: words/phrases
+/**
+ * Combos for words or phrases should all require three or more keys.
+ * Two alpha combos are avoided on purpose to minimize unintentional combo triggers while typing fast,
+ * with the exception of combos with Z, X or symbols.
+ */
+
+// apostrophy combos
+    SUBS(APOS_M,            "'m"                                    TY_SCLN,    TY_M)
+    SUBS(APOS_RE,           "'re"                                   TY_SCLN,    TY_R,       TY_E)
+    SUBS(APOS_R,            "'re"                                   TY_SCLN,    TY_R)
+    SUBS(APOS_S,            "'s"                                    TY_SCLN,    TY_S)
+    SUBS(APOS_N,            "n't"                                   TY_SCLN,    TY_N)
+    SUBS(APOS_NT,           "n't"                                   TY_SCLN,    TY_N,       TY_T)
+    SUBS(APOS_T,            "'t"                                    TY_SCLN,    TY_T)
+
+// common endings
+    SUBS(_EMNT,             "ment",                                 TY_E,       TY_M,       TY_N,       TY_T)
+    SUBS(_INO,              "ion",                                  TY_I,       TY_N,       TY_O)
+    SUBS(_INOT,             "tion",                                 TY_I,       TY_N,       TY_O,       TY_T)
+    SUBS(_INOS,             "sion",                                 TY_I,       TY_N,       TY_O,       TY_S)
+
+// alpha combos: words/phrases
     SUBS(_ACH,              "chain",                                TY_A,       TY_C,       TY_H)
     SUBS(_ADR,              "address",                              TY_A,       TY_D,       TY_R)
     SUBS(_AEF,              "after",                                TY_A,       TY_E,       TY_F)
+    SUBS(_AEPS,             "please",                               TY_A,       TY_E,       TY_P,       TY_S)
     SUBS(_ALR,              "alert",                                TY_A,       TY_L,       TY_R)
     SUBS(_APW,              "WhatsApp",                             TY_A,       TY_P,       TY_W)
-    SUBS(_AR,               "are",                                  TY_A,       TY_R)
     SUBS(_BCN,              "blockchain",                           TY_B,       TY_C,       TY_N)
     SUBS(_BCU,              "because",                              TY_B,       TY_C,       TY_U)
     SUBS(_BDU,              "debug",                                TY_B,       TY_D,       TY_U)
@@ -19,6 +40,7 @@
     SUBS(_CFM,              "confirm",                              TY_C,       TY_F,       TY_M)
     SUBS(_CFN,              "Confluence",                           TY_C,       TY_F,       TY_N)
     SUBS(_CHL,              "channel",                              TY_C,       TY_H,       TY_L)
+    SUBS(_CHLS,             "school",                               TY_C,       TY_H,       TY_L,       TY_S)
     SUBS(_CHS,              "schedule",                             TY_C,       TY_H,       TY_S)
     SUBS(_CNP,              "cryptocurrency",                       TY_C,       TY_N,       TY_P)
     SUBS(_CNU,              "currency",                             TY_C,       TY_N,       TY_U)
@@ -39,13 +61,12 @@
     SUBS(_DSO,              "discord",                              TY_D,       TY_S,       TY_O)
     SUBS(_DSU,              "discuss",                              TY_D,       TY_S,       TY_U)
     SUBS(_DTY,              "yesterday",                            TY_D,       TY_T,       TY_Y)
+    SUBS(_EHILW,            "while",                                TY_E,       TY_H,       TY_I,        TY_L,      TY_W)
+    SUBS(_EHR,              "her",                                  TY_E,       TY_H,       TY_R)
     SUBS(_EHT,              "the",                                  TY_E,       TY_H,       TY_T)
     SUBS(_EKW,              "week",                                 TY_E,       TY_K,       TY_W)
     SUBS(_ELM,              "email",                                TY_E,       TY_L,       TY_M)
     SUBS(_EPS,              "especially",                           TY_E,       TY_P,       TY_S)
-    SUBS(_ER,               "er",                                   TY_E,       TY_R)
-    SUBS(_ES,               "es",                                   TY_E,       TY_S)
-    SUBS(_FL,               "ful",                                  TY_F,       TY_L)
     SUBS(_FUN,              "function",                             TY_F,       TY_U,       TY_N)
     SUBS(_GEL,              "Google",                               TY_G,       TY_E,       TY_L)
     SUBS(_GCL,              "Google Calendar",                      TY_G,       TY_C,       TY_L)
@@ -54,27 +75,29 @@
     SUBS(_GPR,              "group",                                TY_G,       TY_P,       TY_R)
     SUBS(_GES,              "Google Sheet",                         TY_G,       TY_E,       TY_S)
     SUBS(_HAT,              "that",                                 TY_H,       TY_A,       TY_T)
+    SUBS(_HIS,              "his",                                  TY_H,       TY_I,       TY_S)
     SUBS(_HIT,              "this",                                 TY_H,       TY_I,       TY_T)
     SUBS(_IGN,              "ing",                                  TY_I,       TY_G,       TY_N)
     SUBS(_IKT,              "ticket",                               TY_I,       TY_K,       TY_T)
-    SUBS(_IM,               "I'm",                                  TY_I,       TY_M)
-    SUBS(_IN,               "in",                                   TY_I,       TY_N)
-    SUBS(_INO,              "ion",                                  TY_I,       TY_N,       TY_O)
-    SUBS(_IS,               "is",                                   TY_I,       TY_S)
     SUBS(_ISU,              "issue",                                TY_I,       TY_S,       TY_U)
+    SUBS(_KNST,             "thanks",                               TY_K,       TY_N,       TY_S,       TY_T)
     SUBS(_KLS,              "slack",                                TY_K,       TY_L,       TY_S)
     SUBS(_LTW,              "wallet",                               TY_L,       TY_T,       TY_W)
     SUBS(_MGS,              "message",                              TY_M,       TY_G,       TY_S)
+    SUBS(_MNB,              "number",                               TY_M,       TY_N,       TY_B)
     SUBS(_MNT,              "monitor",                              TY_M,       TY_N,       TY_T)
+    SUBS(_MOPR,             "problem",                              TY_M,       TY_O,       TY_P,       TY_R)
     SUBS(_MTZ,              "timezone",                             TY_M,       TY_T,       TY_Z)
     SUBS(_NFT,              "NFT",                                  TY_N,       TY_F,       TY_T)
     SUBS(_NST,              "staging",                              TY_N,       TY_S,       TY_T)
     SUBS(_NSV,              "version",                              TY_N,       TY_S,       TY_V)
-    SUBS(_ON,               "on",                                   TY_O,       TY_N)
-    SUBS(_OR,               "or",                                   TY_O,       TY_R)
-    SUBS(_OU,               "you",                                  TY_O,       TY_U)
-    SUBS(_PS,               "please",                               TY_P,       TY_S)
+    SUBS(_ORW,              "work",                                 TY_O,       TY_R,       TY_W)
     SUBS(_PRS,              "spreadsheet",                          TY_P,       TY_R,       TY_S)
+    SUBS(_TLM,              "telegram",                             TY_T,       TY_L,       TY_M)
+    SUBS(_TMR,              "tomorrow",                             TY_T,       TY_M,       TY_R)
+    SUBS(_TOD,              "today",                                TY_T,       TY_O,       TY_D)
+
+// long words starting with RES
     SUBS(_RES,              "reset",                                TY_R,       TY_E,       TY_S)
     SUBS(_RES_A,            "restart",                              TY_R,       TY_E,       TY_S,       TY_A)
     SUBS(_RES_H,            "research",                             TY_R,       TY_E,       TY_S,       TY_H)
@@ -84,9 +107,6 @@
     SUBS(_RES_N,            "resolution",                           TY_R,       TY_E,       TY_S,       TY_N)
     SUBS(_RES_O,            "resolve",                              TY_R,       TY_E,       TY_S,       TY_O)
     SUBS(_RES_U,            "result",                               TY_R,       TY_E,       TY_S,       TY_U)
-    SUBS(_RY,               "you're",                               TY_R,       TY_Y)
-    SUBS(_TLM,              "telegram",                             TY_T,       TY_L,       TY_M)
-    SUBS(_TOD,              "today",                                TY_T,       TY_O,       TY_D)
 
 // Z-three-key combos: phrases / replies
     SUBS(_ZFN,              "friendly reminder",                    TY_Z,       TY_F,       TY_N)
