@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 // two-handed symmetric combos
-    COMB(KC_Q_KY_P,                     XXXXXXX,                        TY_Q,     TY_P)
-    COMB(KC_W_KY_O,                     XXXXXXX,                        TY_W,     TY_O)
-    COMB(KC_E_KY_I,                     XXXXXXX,                        TY_E,     TY_I)
-    COMB(KC_R_KY_O,                     XXXXXXX,                        TY_R,     TY_U)
-    COMB(KC_T_KY_Y,                     XXXXXXX,                        TY_T,     TY_Y)
+    // COMB(KC_Q_KY_P,                     XXXXXXX,                        TY_Q,     TY_P)
+    // COMB(KC_W_KY_O,                     XXXXXXX,                        TY_W,     TY_O)
+    // COMB(KC_E_KY_I,                     XXXXXXX,                        TY_E,     TY_I)
+    // COMB(KC_R_KY_O,                     XXXXXXX,                        TY_R,     TY_U)
+    // COMB(KC_T_KY_Y,                     XXXXXXX,                        TY_T,     TY_Y)
 
     COMB(KC_A_KY_SCLN,                  OSM(MOD_LCTL),                  TY_A,     TY_SCLN)
     COMB(KC_S_KY_L,                     OSM(MOD_LALT),                  TY_S,     TY_L)
@@ -22,4 +22,4 @@
 
     COMB(KC_LT1_RT1,                    KC_CAPS,                        TY_TCL1,  TY_TCR1)
     COMB(KC_LT2_RT2,                    CW_TOGG,                        TY_TCL2,  TY_TCR2)
-    COMB(KC_LT3_RT3,                    XXXXXXX,                        TY_TCL3,  TY_TCR3)
+    // COMB(KC_LT3_RT3,                    XXXXXXX,                        TY_TCL3,  TY_TCR3)

@@ -11,14 +11,14 @@
     /// horizontal...
 
     COMB(ADJ_QW,            G(KC_Q),                        TY_Q,     TY_W)
-    COMB(ADJ_WE,            XXXXXXX,                        TY_W,     TY_E)
-    SUBS(ADJ_ER,            XXXXXXX,                        TY_E,     TY_R)
+    // COMB(ADJ_WE,            XXXXXXX,                        TY_W,     TY_E)
+    // COMB(ADJ_ER,            XXXXXXX,                        TY_E,     TY_R)
     COMB(ADJ_RT,            KC_UNDS,                        TY_R,     TY_T)
     COMB(ADJ_YU,            KC_PMNS,                        TY_Y,     TY_U)
-    COMB(ADJ_UI,            XXXXXXX,                        TY_U,     TY_I)
-    COMB(ADJ_IO,            XXXXXXX,                        TY_I,     TY_O)
-    COMB(ADJ_OP,            XXXXXXX,                        TY_O,     TY_P)
-    COMB(ADJ_AS,            XXXXXXX,                        TY_A,     TY_S)
+    // COMB(ADJ_UI,            XXXXXXX,                        TY_U,     TY_I)
+    // COMB(ADJ_IO,            XXXXXXX,                        TY_I,     TY_O)
+    // COMB(ADJ_OP,            XXXXXXX,                        TY_O,     TY_P)
+    // COMB(ADJ_AS,            XXXXXXX,                        TY_A,     TY_S)
     COMB(ADJ_SD,            KC_BSPC,                        TY_S,     TY_D)
     COMB(ADJ_DF,            KC_TAB,                         TY_D,     TY_F)
     COMB(ADJ_FG,            KC_DEL,                         TY_F,     TY_G)
@@ -33,7 +33,7 @@
     TOGG(ADJ_NM,            TY_CONTROLS,                    TY_N,     TY_M)
     TOGG(ADJ_MCOMM,         TY_CODING,                      TY_M,     TY_COMM)
     TOGG(ADJ_COMMDOT,       TY_NUMBERS,                     TY_COMM,  TY_DOT)
-    COMB(ADJ_DOTSLSH,       XXXXXXX,                        TY_DOT,   TY_SLSH)
+    // COMB(ADJ_DOTSLSH,       XXXXXXX,                        TY_DOT,   TY_SLSH)
 
     /// vertical
 
