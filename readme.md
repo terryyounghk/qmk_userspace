@@ -1,10 +1,12 @@
 # Personal QMK userspace
 
-This is a personal userspace repo for QMK keyboard firmware.
+**Disclaimer**
 
-Disclaimer: this is only tested on RGBKB sol3, which is the keyboard I currently use.
+This is my personal userspace repo for QMK keyboard firmware and my journey of evolving my personal QMK keymap and keyboard preferences.
 
-This firmware is my journey of evolving my personal QMK keymap and keyboard preferences.
+This is only tested on a RGBKB sol3, which is the keyboard I currently use.
+
+This repo is also my first experience with the `C` programming language.
 
 # Feature Highlights
 
@@ -35,16 +37,6 @@ Optionally, you can enable [Home Row Mods (CAGS)](https://precondition.github.io
 These are disabled by default in exchange for a more responsive "Tapping Term", suitable for fast typists wanting to avoid accidentally triggering modifiers or other tap dance "hold" actions.
 
 Edit `configs/my-options.h` to toggle audio feedback, home row mods and tap dances.
-
-## How this came to be
-
-My personal preference is to keep multiple ways of accessing layers and modifiers, particularly in one-handed and two-handed situations.
-
-I am personally moving from Home Row Mods to Combo Mods, and this firmware can be configured for both to co-exist. Combos seem to be less intrusive when typing fast and rolling keys, and not easy to trigger by those who don't use them, so I decided to have them always present, while Home Row Mods become optional.
-
-This firmware also demonstrates various ways to implement memorable key combo layouts that you can build upon.
-
-Whether you want to switch from home row mods to combos mods or vice versa, or even haven't used any of them and wanted to try out both to see which suits your preference, I hope this idea serves as a good transitional keymap on your own journey of keymap customization.
 
 # Layers
 
@@ -213,6 +205,16 @@ Caps Word
 
 - https://kbd.news/Caps-Word-and-other-QMK-tips-1073.html
 - https://getreuer.info/posts/keyboards/caps-word/index.html#add-caps-word-to-your-keymap
+
+# How this came to be
+
+My personal preference is to keep multiple ways of accessing layers and modifiers, particularly in one-handed and two-handed situations.
+
+I am personally moving from Home Row Mods to Combo Mods, and this firmware can be configured for both to co-exist. Combos seem to be less intrusive when typing fast and rolling keys, and not easy to trigger by those who don't use them, so I decided to have them always present, while Home Row Mods become optional.
+
+This firmware also demonstrates various ways to implement memorable key combo layouts that you can build upon.
+
+Whether you want to switch from home row mods to combos mods or vice versa, or even haven't used any of them and wanted to try out both to see which suits your preference, I hope this idea serves as a good transitional keymap on your own journey of keymap customization.
 
 # TODO
 

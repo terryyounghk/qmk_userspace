@@ -4,13 +4,13 @@
 #include QMK_KEYBOARD_H
 #include "quantum.h"
 #include "g/keymap_combo.h"
-#include "features/caps-word.c"
-#ifdef TAP_DANCE_ENABLE
-    #include "features/tapdance.c"
-#endif
 #if defined AUDIO_ENABLE && defined TY_AUDIO_ENABLE
     #include "features/audio.c"
 #endif
+#ifdef TAP_DANCE_ENABLE
+    #include "features/tapdance.c"
+#endif
+#include "features/caps-word.c"
 #include "features/oled.c"
 
 layer_state_t layer_state_set_user(layer_state_t state) {
