@@ -1,6 +1,11 @@
 // Copyright 2023 Terry Young (@terryyounghk)
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+/*
+ * Notes:
+ * For the YU combo, use KC_PMNS (key pad minus) instead of KC_MINS to work with Caps Word mode
+ */
+
 // adjacent two-key combos (ordered by row-column)
 
     /// horizontal...
@@ -9,7 +14,7 @@
     COMB(ADJ_WE,            XXXXXXX,                        TY_W,     TY_E)
     SUBS(ADJ_ER,            XXXXXXX,                        TY_E,     TY_R)
     COMB(ADJ_RT,            KC_UNDS,                        TY_R,     TY_T)
-    COMB(ADJ_YU,            KC_MINS,                        TY_Y,     TY_U)
+    COMB(ADJ_YU,            KC_PMNS,                        TY_Y,     TY_U)
     COMB(ADJ_UI,            XXXXXXX,                        TY_U,     TY_I)
     COMB(ADJ_IO,            XXXXXXX,                        TY_I,     TY_O)
     COMB(ADJ_OP,            XXXXXXX,                        TY_O,     TY_P)
