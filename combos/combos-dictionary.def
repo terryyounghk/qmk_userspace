@@ -8,13 +8,13 @@
  */
 
 // apostrophy combos
-    SUBS(APOS_M,            "'m"                                    TY_SCLN,    TY_M)
-    SUBS(APOS_RE,           "'re"                                   TY_SCLN,    TY_R,       TY_E)
-    SUBS(APOS_R,            "'re"                                   TY_SCLN,    TY_R)
-    SUBS(APOS_S,            "'s"                                    TY_SCLN,    TY_S)
-    SUBS(APOS_N,            "n't"                                   TY_SCLN,    TY_N)
-    SUBS(APOS_NT,           "n't"                                   TY_SCLN,    TY_N,       TY_T)
-    SUBS(APOS_T,            "'t"                                    TY_SCLN,    TY_T)
+    SUBS(APOS_M,            "'m",                                   TY_SCLN,    TY_M)
+    SUBS(APOS_RE,           "'re",                                  TY_SCLN,    TY_R,       TY_E)
+    SUBS(APOS_R,            "'re",                                  TY_SCLN,    TY_R)
+    SUBS(APOS_S,            "'s",                                   TY_SCLN,    TY_S)
+    SUBS(APOS_N,            "n't",                                  TY_SCLN,    TY_N)
+    SUBS(APOS_NT,           "n't",                                  TY_SCLN,    TY_N,       TY_T)
+    SUBS(APOS_T,            "'t",                                   TY_SCLN,    TY_T)
 
 // common endings
     SUBS(_EMNT,             "ment",                                 TY_E,       TY_M,       TY_N,       TY_T)

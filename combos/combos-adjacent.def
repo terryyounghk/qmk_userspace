@@ -65,4 +65,4 @@
     COMB(ADJ_DG,            KC_ESC,                         TY_D,     TY_G)
     COMB(ADJ_HK,            KC_TAB,                         TY_H,     TY_K)
     COMB(ADJ_JL,            KC_SPC,                         TY_J,     TY_L)
-    COMB(ADJ_KSCLS,         KC_ENT,                         TY_K,     TY_SCLS)
+    COMB(ADJ_KSCLN,         KC_ENT,                         TY_K,     TY_SCLN)
