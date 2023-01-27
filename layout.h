@@ -3,11 +3,51 @@
 
 #pragma once
 
-#define TY_DUAL_ROLE_THUMBS_ENABLE
-// #define TY_HOME_ROW_MODS_ENABLE
-// #define TY_TAP_DANCE_ENABLE
+#define ___ _______
 
-#include "layouts/common.h"
+// layers
+
+#define TY_ALPHAS          0
+#define TY_NUMBERS         1
+#define TY_CODING          2
+#define TY_CONTROLS        3
+
+// Mod Aliases
+
+#define CT(k)     CTL_T(k)
+#define AT(k)     ALT_T(k)
+#define GT(k)     GUI_T(k)
+#define ST(k)     SFT_T(k)
+#define MH(k)     MEH_T(k)
+#define HT(k)     HYPR_T(k)
+
+// Home Row Mods (HRM): CAGS
+
+#define HRML(k1,k2,k3,k4,k5)   CT(k1),AT(k2),GT(k3),ST(k4),HT(k5) // only supports basic keycode
+#define HRMR(k1,k2,k3,k4,k5)   HT(k1),ST(k2),GT(k3),AT(k4),CT(k5) // only supports basic keycode
+
+// Aliases: Special characters
+
+#define TY_YEN          A(TY_Y)
+#define TY_EURO         LSA(KC_2)
+#define TY_PND          A(KC_3)
+#define TY_DLR          KC_DLR
+
+// Aliases: Media, Devices, Wireless/Bluetooth
+
+#define TY_VDN          KC_KB_VOLUME_DOWN
+#define TY_VUP          KC_KB_VOLUME_UP
+#define TY_VMT          KC_KB_MUTE
+
+// Aliases: mac specific shortcut aliases (reserved here if you want to use it)
+// https://support.apple.com/en-us/HT201236
+
+#define TY_OSSL         C(S(KC_MEDIA_EJECT)) // restart
+#define TY_OSDS         C(G(KC_MEDIA_EJECT)) // display sleep
+#define TY_OSMS         C(A(KC_MEDIA_EJECT)) // mac sleep
+#define TY_OSLK         G(C(KC_Q)) // mac lock
+#define TY_OSLO         G(S(KC_Q)) // mac logout
+#define TY_OSFQ         G(A(KC_ESC)) // mac force quit app
 
 #ifdef TAP_DANCE_ENABLE
     // tap dance enums
@@ -77,12 +117,21 @@
     #define TY_DOT              KC_DOT
     #define TY_COMM             KC_COMM
     #define TY_SLSH             KC_SLSH
-    #define TY_TL1              KC_TAB
-    #define TY_TL2              KC_SPC
-    #define TY_TL3              KC_ESC
-    #define TY_TR1              KC_ENT
-    #define TY_TR2              KC_SPC
-    #define TY_TR3              KC_BSPC
+
+    /**
+     * Notes
+     * If TY_DUAL_ROLE_THUMBS_ENABLE is undefined,
+     * then,
+     * TY_TCL1 and TY_TCR1 must be different for Caps Lock to work
+     * similarly,
+     * TY_TCL2 and TY_TCR2 must be different for Caps Word to work
+     */
+    #define TY_TCL1             KC_TAB
+    #define TY_TCL2             KC_BSPC
+    #define TY_TCL3             KC_ESC
+    #define TY_TCR1             KC_ENT
+    #define TY_TCR2             KC_SPC
+    #define TY_TCR3             KC_DEL
 
 #ifdef TY_HOME_ROW_MODS_ENABLE
     #undef  TY_A
@@ -148,7 +197,7 @@
     #undef  TY_TCL3
     #define TY_TCL3         LT(TY_NUMBERS, KC_ESC)
     #undef  TY_TCL2
-    #define TY_TCL2         ST(KC_SPC)
+    #define TY_TCL2         ST(KC_BSPC)
     #undef  TY_TCL1
     #define TY_TCL1         LT(TY_CONTROLS, KC_TAB)
     // right hand, from innermost outwards
@@ -157,7 +206,7 @@
     #undef  TY_TCR2
     #define TY_TCR2         LT(TY_CODING, KC_SPC)
     #undef  TY_TCR3
-    #define TY_TCR3         ST(KC_BSPC)
+    #define TY_TCR3         ST(KC_DEL)
     // in other layers
     #undef  TY_F11
     #define TY_F11          ST(KC_F11)
