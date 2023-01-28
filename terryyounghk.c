@@ -21,6 +21,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             case TY_NUMBERS:  PLAY_SONG(TY_NUMBERS_SONG);  break;
             case TY_CODING:   PLAY_SONG(TY_CODING_SONG);   break;
             case TY_CONTROLS: PLAY_SONG(TY_CONTROLS_SONG); break;
+            default: stop_all_notes(); break;
         }
     #endif
 
