@@ -135,7 +135,7 @@ Another example below shows the `ZS` combos which output short month names. Simi
 
 ![36-keys layout - Key-specific Combos Example #2](./docs/terryyounghk-36keys-qmk-combos-key-specific-02-20230128-01.png)
 
-There are more combos in `combos.def`, including those that output words and phrases I frequently use but too lazy to type over and over again...
+There are more combos in `combos.def`, including hand swap features, plus combos  that output words and phrases I frequently use but too lazy to type over and over again...
 
 You can also start extending your own preferences/overrides in `combos-private.def`.
 

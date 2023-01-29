@@ -63,3 +63,6 @@
 #ifdef AUDIO_ENABLE
     #define AUDIO_CLICKY
 #endif
+
+// Hand swap configs
+#define TAPPING_TOGGLE 2

@@ -1,6 +1,8 @@
 // Copyright 2023 Terry Young (@terryyounghk)
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+#ifdef TAP_DANCE_ENABLE
+
 #include "tapdance.h"
 #include "tapdance.clipboard.c"
 
@@ -33,3 +35,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
         dance_paste_reset
     ),
 };
+
+#endif // TAP_DANCE_ENABLE

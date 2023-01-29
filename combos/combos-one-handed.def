@@ -34,6 +34,15 @@
     COMB(KY_ASF_____TY_TCL2,       OSM(MOD_LCTL | MOD_LALT | MOD_LSFT),             TY_MAIN, TY_A, TY_S, TY_F)
     COMB(KY_ADF_____TY_TCL2,       OSM(MOD_LCTL | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_A, TY_D, TY_F)
 
+    // special combos
+    #undef  TY_MAIN
+    #define TY_MAIN TY_TCL2, TY_Z
+    COMB(KY_B_____TY_TCL2_Z,       SH_ON,                                           TY_MAIN, TY_B)
+    COMB(KY_V_____TY_TCL2_Z,       SH_OFF,                                          TY_MAIN, TY_V)
+    COMB(KY_G_____TY_TCL2_Z,       SH_TG,                                           TY_MAIN, TY_G)
+    COMB(KY_F_____TY_TCL2_Z,       SH_TT,                                           TY_MAIN, TY_F)
+    COMB(KY_D_____TY_TCL2_Z,       SH_OS,                                           TY_MAIN, TY_D)
+
 // right hand side
     #undef  TY_MAIN
     #define TY_MAIN TY_TCR2
@@ -64,3 +73,12 @@
     COMB(KY_LKJ_____TY_TCR2,       OSM(MOD_LALT | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_L, TY_K, TY_J)
     COMB(KY_LJSCLN__TY_TCR2,       OSM(MOD_LCTL | MOD_LALT | MOD_LSFT),             TY_MAIN, TY_L, TY_J, TY_SCLN)
     COMB(KY_KJSCLN__TY_TCR2,       OSM(MOD_LCTL | MOD_LGUI | MOD_LSFT),             TY_MAIN, TY_K, TY_J, TY_SCLN)
+
+    // special combos
+    #undef  TY_MAIN
+    #define TY_MAIN TY_TCR2, TY_SLSH
+    COMB(KY_N__TY_TCR2_SLSH,       SH_ON,                                           TY_MAIN, TY_N)
+    COMB(KY_M__TY_TCR2_SLSH,       SH_OFF,                                          TY_MAIN, TY_M)
+    COMB(KY_H__TY_TCR2_SLSH,       SH_TG,                                           TY_MAIN, TY_H)
+    COMB(KY_J__TY_TCR2_SLSH,       SH_TT,                                           TY_MAIN, TY_J)
+    COMB(KY_K__TY_TCR2_SLSH,       SH_OS,                                           TY_MAIN, TY_K)
