@@ -23,21 +23,30 @@
 
 #if defined TY_HOME_ROW_MODS_ENABLE || defined TY_DUAL_ROLE_THUMBS_ENABLE
     // tapping sensitivity tweaked for home row mods
-    #define TAPPING_TERM 200
+    #define TAPPING_TERM 350
     #define IGNORE_MOD_TAP_INTERRUPT
     // #define PERMISSIVE_HOLD
     // #define RETRO_TAPPING
 #endif
 
+// Hand swap configs
+#define TAPPING_TOGGLE 2
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+// #define TAPPING_FORCE_HOLD
+
 // combos
 #ifdef COMBO_ENABLE
     #define COMBO_VARIABLE_LEN
     #define COMBO_ONLY_FROM_LAYER 0  // base layer
-    #define COMBO_TERM 35
+    #define COMBO_TERM 30        // how quickly all combo keys must be pressed in succession to trigger
+    #define COMBO_MUST_HOLD_MODS // if a combo triggers a modifier, only trigger when the combo is held
+    #define COMBO_HOLD_TERM 270  // how long at least one of the combo keys must be held to trigger
 #endif
 
-// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-// #define TAPPING_FORCE_HOLD
+// https://docs.qmk.fm/#/one_shot_keys
+#define ONESHOT_TAP_TOGGLE 2  // Tapping this number of times holds the key until tapped once again.
+#define ONESHOT_TIMEOUT 3000  // Time (in ms) before the one shot key is released
 
 // Caps
 // #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
@@ -63,6 +72,3 @@
 #ifdef AUDIO_ENABLE
     #define AUDIO_CLICKY
 #endif
-
-// Hand swap configs
-#define TAPPING_TOGGLE 2
