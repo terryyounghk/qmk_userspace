@@ -50,7 +50,7 @@
     COMB(KY_U_______TY_TCR2,       OSL(TY_CONTROLS),                                TY_MAIN, TY_U)
     COMB(KY_I_______TY_TCR2,       OSL(TY_CODING),                                  TY_MAIN, TY_I)
     COMB(KY_O_______TY_TCR2,       OSL(TY_NUMBERS),                                 TY_MAIN, TY_O)
-    // COMB(KY_P_______TY_TCR2,       XXXXXXX,                                         TY_MAIN, TY_P)
+ // COMB(KY_P_______TY_TCR2,       XXXXXXX,                                         TY_MAIN, TY_P)
     COMB(KY_H_______TY_TCR2,       OSM(MOD_HYPR),                                   TY_MAIN, TY_H)
     COMB(KY_J_______TY_TCR2,       OSM(MOD_LSFT),                                   TY_MAIN, TY_J)
     COMB(KY_K_______TY_TCR2,       OSM(MOD_LGUI),                                   TY_MAIN, TY_K)
