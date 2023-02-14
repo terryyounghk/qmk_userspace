@@ -118,6 +118,18 @@
     #define TY_COMM             KC_COMM
     #define TY_SLSH             KC_SLSH
 
+    // home rows of other layers
+    #define TY_QUOT             KC_QUOT
+    #define TY_GRV              KC_GRV
+    #define TY_LBRC             KC_LBRC
+    #define TY_RBRC             KC_RBRC
+    #define TY_PAST             KC_PAST
+    #define TY_LEFT             KC_LEFT
+    #define TY_DOWN             KC_DOWN
+    #define TY_UP               KC_UP
+    #define TY_RGHT             KC_RGHT
+    #define TY_BSLS             KC_BSLS
+
     /**
      * Notes
      * If TY_DUAL_ROLE_THUMBS_ENABLE is undefined,
@@ -178,6 +190,26 @@
     #define TY_0            CT(KC_0)
     #undef  TY_SCLN
     #define TY_SCLN         CT(KC_SCLN)
+    #undef  TY_QUOT
+    #define TY_QUOT         KC_QUOT
+    #undef  TY_GRV
+    #define TY_GRV          KC_GRV
+    #undef  TY_LBRC
+    #define TY_LBRC         KC_LBRC
+    #undef  TY_RBRC
+    #define TY_RBRC         KC_RBRC
+    #undef  TY_PAST
+    #define TY_PAST         KC_PAST
+    #undef  TY_LEFT
+    #define TY_LEFT         KC_LEFT
+    #undef  TY_DOWN
+    #define TY_DOWN         KC_DOWN
+    #undef  TY_UP
+    #define TY_UP           KC_UP
+    #undef  TY_RGHT
+    #define TY_RGHT         KC_RGHT
+    #undef  TY_BSLS
+    #define TY_BSLS         KC_BSLS
 #endif
 
 // tap dance overrides
@@ -252,12 +284,12 @@
 
 
 #define TY_CODING_L1           KC_CIRC,         KC_AT,          KC_LPRN,        KC_RPRN,        KC_DLR
-#define TY_CODING_L2    HRML(  KC_QUOT,         KC_GRV,         KC_LBRC,        KC_RBRC,        KC_PAST      )
+#define TY_CODING_L2           TY_QUOT,         TY_GRV,         TY_LBRC,        TY_RBRC,        TY_PAST
 #define TY_CODING_L3           KC_EXLM,         KC_HASH,        KC_MINS,        KC_EQL,         KC_TILD
 #define TY_CODING_L4           /**/             /**/            _______,        _______,        _______
 
 #define TY_CODING_R1           KC_HOME,         KC_PGDN,        KC_PGUP,        KC_END,         KC_CAPS
-#define TY_CODING_R2    HRMR(  KC_LEFT,         KC_DOWN,        KC_UP,          KC_RGHT,        KC_BSLS      )
+#define TY_CODING_R2           TY_LEFT,         TY_DOWN,        TY_UP,          TY_RGHT,        TY_BSLS
 #define TY_CODING_R3           KC_PERC,         KC_AMPR,        _______,        _______,        _______
 #define TY_CODING_R4           _______,         _______,        _______         /**/            /**/
 
