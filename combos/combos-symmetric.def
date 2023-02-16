@@ -14,7 +14,7 @@
     COMB(KC_F_KY_J,                     OSM(MOD_LSFT),                  TY_F,     TY_J)
     COMB(KC_G_KY_H,                     OSM(MOD_HYPR),                  TY_G,     TY_H)
 
-    COMB(KC_Z_KY_SLSH,                  OSM(MOD_MEH),                   TY_Z,     TY_SLSH)
+    COMB(KC_Z_KY_SLSH,                  G(KC_Z),                        TY_Z,     TY_SLSH)
     COMB(KC_X_KY_DOT,                   G(KC_X),                        TY_X,     TY_DOT)
     COMB(KC_C_KY_COMM,                  G(KC_C),                        TY_C,     TY_COMM)
     COMB(KC_V_KY_M,                     G(KC_V),                        TY_V,     TY_M)
