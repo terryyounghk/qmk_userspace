@@ -18,9 +18,15 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             case TY_NUMBERS:  PLAY_SONG(TY_NUMBERS_SONG);  break;
             case TY_CODING:   PLAY_SONG(TY_CODING_SONG);   break;
             case TY_CONTROLS: PLAY_SONG(TY_CONTROLS_SONG); break;
-            default: stop_all_notes(); break;
         }
     #endif
 
     return state;
+}
+
+void oneshot_mods_changed_user(uint8_t mods) {
+    stop_all_notes();
+    mods ?
+        PLAY_SONG(TY_OSM_ON_SONG) :
+        PLAY_SONG(TY_OSM_OFF_SONG);
 }
