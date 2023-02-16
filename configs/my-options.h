@@ -16,7 +16,7 @@
  * and these combos also use thumb keys, of which if you also hold down the thumb
  * after hitting a combo, would basically be very similar to just the thumb tap-hold feeling.
  */
-// #define TY_DUAL_ROLE_THUMBS_ENABLE
+#define TY_DUAL_ROLE_THUMBS_ENABLE
 
 
 /**
