@@ -60,9 +60,22 @@
 
 // adjacent (horizontal, one-key apart, home row only)
 // supplemental combos that make certain keys from one hand available on the other hand
-    COMB(ADJ_AD,            KC_ENT,                         TY_A,     TY_D)
+    COMB(ADJ_AD,            XXXXXXX,                        TY_A,     TY_D)
     COMB(ADJ_SF,            KC_SPC,                         TY_S,     TY_F)
     COMB(ADJ_DG,            KC_ESC,                         TY_D,     TY_G)
     COMB(ADJ_HK,            KC_TAB,                         TY_H,     TY_K)
     COMB(ADJ_JL,            KC_SPC,                         TY_J,     TY_L)
-    COMB(ADJ_KSCLN,         KC_ENT,                         TY_K,     TY_SCLN)
+    COMB(ADJ_KSCLN,         XXXXXXX,                        TY_K,     TY_SCLN)
+
+// diagonal two-key combos
+    COMB(ADJ_OSCLN,         KC_DQUO,                        TY_O,     TY_SCLN)
+    COMB(ADJ_LSLSH,         KC_BSLS,                        TY_L,     TY_SLSH)
+
+    COMB(ADJ_JN,            KC_TAB,                         TY_J,     TY_N)
+    COMB(ADJ_BF,            KC_TAB,                         TY_B,     TY_F)
+
+    COMB(ADJ_KM,            KC_ENT,                         TY_K,     TY_M)
+    COMB(ADJ_DV,            KC_ENT,                         TY_D,     TY_V)
+
+    COMB(ADJ_GR,            KC_EQL,                         TY_G,     TY_R)
+    COMB(ADJ_HU,            S(KC_EQL),                      TY_H,     TY_U)
