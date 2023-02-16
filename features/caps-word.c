@@ -11,9 +11,13 @@ void caps_word_set_user(bool active) {
 
 bool led_update_user(led_t led_state) {
     #if defined AUDIO_ENABLE && defined TY_AUDIO_ENABLE
+    static uint8_t caps_state = 0;
+    if (caps_state != led_state.caps_lock) {
         led_state.caps_lock ?
             PLAY_SONG(TY_CAPS_LOCK_ON_SONG) :
             PLAY_SONG(TY_CAPS_LOCK_OFF_SONG);
+        caps_state = led_state.caps_lock;
+    }
     #endif
     return true;
 }
