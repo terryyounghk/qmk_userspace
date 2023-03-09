@@ -1,7 +1,6 @@
 # Copyright 2023 Terry Young (@terryyounghk)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-AUDIO_ENABLE = yes
 AUTO_SHIFT_ENABLE = no # Auto Shift
 CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
