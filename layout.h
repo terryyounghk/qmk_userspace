@@ -299,7 +299,7 @@
 #define TY_CONTROLS_L3         _______,         _______,        _______,        _______,        TY_VMT
 #define TY_CONTROLS_L4         /**/             /**/            _______,        _______,        _______
 
-#define TY_CONTROLS_R1         _______,         KC_BTN4,        KC_MS_U,        KC_BTN5,        _______
+#define TY_CONTROLS_R1         CM_ON,           KC_BTN4,        KC_MS_U,        KC_BTN5,        CM_OFF
 #define TY_CONTROLS_R2         KC_WH_D,         KC_MS_L,        KC_MS_D,        KC_MS_R,        KC_ACL0
 #define TY_CONTROLS_R3         KC_WH_U,         KC_WH_L,        KC_BTN3,        KC_WH_R,        RGB_MOD
 #define TY_CONTROLS_R4         KC_BTN1,         KC_BTN2,        TO(0)           /**/            /**/
@@ -351,10 +351,10 @@ KC_VOLD,    KC_VOLU,    KC_MNXT,    KC_MPLY,    KC_MPRV,                        
                   K31, K32, K33,        K34, K35, K36 \
     ) \
     LAYOUT_wrapper( \
-        ___,   ___,   ___,   ___,   ___,   ___,   ___,                ___,   ___,   ___,   ___,   ___,   ___,   ___,   \
-        ___,   K01,   K02,   K03,   K04,   K05,   ___,                ___,   K06,   K07,   K08,   K09,   K0A,   ___,   \
-        ___,   K11,   K12,   K13,   K14,   K15,   ___,                ___,   K16,   K17,   K18,   K19,   K1A,   ___,   \
-        ___,   K21,   K22,   K23,   K24,   K25,   ___,                ___,   K26,   K27,   K28,   K29,   K2A,   ___,   \
-        ___,   ___,   ___,   ___,   K31,   K32,   ___,   K33,  K34,   ___,   K35,   K36,   ___,   ___,   ___,   ___,   \
+        OSM(MOD_MEH ),   TO(1), TO(2), TO(3), TO(4), ___,   ___,                ___,   ___,   ___,   ___,   ___,   TO(0), OSM(MOD_MEH ),   \
+        OSM(MOD_LALT),   K01,   K02,   K03,   K04,   K05,   ___,                ___,   K06,   K07,   K08,   K09,   K0A,   OSM(MOD_RALT),   \
+        OSM(MOD_LGUI),   K11,   K12,   K13,   K14,   K15,   ___,                ___,   K16,   K17,   K18,   K19,   K1A,   OSM(MOD_RGUI),   \
+        OSM(MOD_LSFT),   K21,   K22,   K23,   K24,   K25,   ___,                ___,   K26,   K27,   K28,   K29,   K2A,   OSM(MOD_RSFT),   \
+        OSM(MOD_LCTL),   ___,   ___,   ___,   K31,   K32,   ___,   K33,  K34,   ___,   K35,   K36,   ___,   ___,   ___,   OSM(MOD_RCTL),   \
         TY_SOL3_DEFAULT_ENCODERS \
     )

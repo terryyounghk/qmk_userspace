@@ -54,7 +54,7 @@ Edit `configs/my-options.h` to toggle audio feedback, home row mods and tap danc
 
 ## Controls Layer
 
-![36-keys layout - Controls Layer](./docs/terryyounghk-36keys-qmk-layer3-20230128-01.png)
+![36-keys layout - Controls Layer](./docs/terryyounghk-36keys-qmk-layer3-20230309-01.png)
 
 While this Controls layer gives you mouse, keyboard RGB and volume controls, operations like `Undo` and `Clipboard` remains accessible with either tap dances or key combos, which can be good for things such as quick edits on draw.io.
 
